@@ -13,7 +13,7 @@
     <telecom>
       <system value="email"/>
       <value value="ukcore@hl7.org.uk" />
-		<use value="work" />
+    <use value="work" />
       <rank value="1" />
     </telecom>
   </contact>
