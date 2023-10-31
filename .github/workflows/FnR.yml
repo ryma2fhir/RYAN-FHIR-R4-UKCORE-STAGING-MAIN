@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Tabs to spaces
-        run: find ./ -type f -name *.xml -exec sed -i -e ‘s/	/  /g’ {} \;
+        run: find ./ -type f -name *.xml -exec sed -i ‘s/\t/  /g’ {} \;
       - name: Set Git config
         run: |
           git config --local user.email "findReplace@github.com"
