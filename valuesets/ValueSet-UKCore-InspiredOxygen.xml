@@ -7,15 +7,15 @@
    <status value="draft" />
    <date value="2023-09-12" />
    <publisher value="HL7 UK" />
-	<contact>
-		<name value="HL7 UK" />
-		<telecom>
-			<system value="email" />
-			<value value="ukcore@hl7.org.uk" />
-			<use value="work" />
-			<rank value="1" />
-		</telecom>
-	</contact>
+  <contact>
+    <name value="HL7 UK" />
+    <telecom>
+      <system value="email" />
+      <value value="ukcore@hl7.org.uk" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
    <description value="A code from the SNOMED CT UK coding system which describes whether a patient requires oxygen or is breathing room air. Selected from the SNOMED CT UK coding system:
 &#13; - 722742002 | Breathing room air (finding)
 &#13; - 371825009 | Patient on oxygen (finding)"/>
