@@ -1,4 +1,4 @@
-name: Find and Replace
+name: Signed Find and Replace
 on:
   # NOTE: Need to run on a PR so that the ${{ github.head_ref }} (branch) is non-null
   pull_request:
