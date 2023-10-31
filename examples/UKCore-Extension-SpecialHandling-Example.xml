@@ -14,13 +14,13 @@
  </subject>
  <receivedTime value="2023-04-23T17:02:00Z"/>
  <collection>
-	<!-- ***************extension start*************** -->
-	<extension url="http://hl7.org/fhir/StructureDefinition/specimen-specialHandling">
-		<valueCodeableConcept>
-			<text value="Mother was infected with suspected viral haemorrhagic fever."/>
-		</valueCodeableConcept>
-	</extension>
-	<!-- **************extension end ****************** -->
+  <!-- ***************extension start*************** -->
+  <extension url="http://hl7.org/fhir/StructureDefinition/specimen-specialHandling">
+    <valueCodeableConcept>
+      <text value="Mother was infected with suspected viral haemorrhagic fever."/>
+    </valueCodeableConcept>
+  </extension>
+  <!-- **************extension end ****************** -->
   <collector>
    <reference value="Practitioner/UKCore-Practitioner-ConsultantSandraGose-Example"/>
   </collector>
