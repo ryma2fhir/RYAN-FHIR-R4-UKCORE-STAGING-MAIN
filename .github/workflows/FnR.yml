@@ -12,7 +12,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           
       - name: Tabs to spaces
-        run: find ./ -type f -name *.xml -exec sed -i 's/\t/  /g' {} \;
+        run: find ./ -type f -name *.xml -exec sed -i -e 's/\t/  /g' -e 's/\"\/>/\" \/>/g' {} \;
       
       - name: Push changes
         uses: EndBug/add-and-commit@v7
