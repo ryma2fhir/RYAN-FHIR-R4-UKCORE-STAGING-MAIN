@@ -7,14 +7,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          
       - name: Tabs to spaces
         run: find ./ -type f -name *.xml -exec sed -i 's/\t/  /g' {} \;
       - name: Set Git config
         run: |
           git config --local user.email "findReplace@github.com"
           git config --local user.name "find and Replace"
-      - name: Merge
-        run: |
-          git add .
-          git commit -m "Actions: Find and Replace"
-          git push
+      
+      - name: Push changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: 'Find and Replace'
