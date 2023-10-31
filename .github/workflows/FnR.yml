@@ -1,0 +1,21 @@
+name: find and replace
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Tabs to spaces
+      run: find ./ -type f -name *.xml -exec sed -i -e ‘s/	/  /g’ {} \;
+	  
+    - name: Set Git config
+      run: |
+        git config --local user.email "findReplace@github.com"
+        git config --local user.name "find and Replace"
+	
+    - name: Merge
+      run |
+        git add .
+        git commit -m "Actions: Find and Replace"
+        git push
