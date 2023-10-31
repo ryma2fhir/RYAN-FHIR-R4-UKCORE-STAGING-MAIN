@@ -24,31 +24,31 @@
     </include>
   </compose>
   <expansion>
-    <identifier value="aa18d91e-7d58-452c-af7f-3533dfccd3a1"/>
-    <timestamp value="2022-01-07T13:54:44+00:00"/>
-    <total value="2"/>
-    <offset value="0"/>
+    <identifier value="aa18d91e-7d58-452c-af7f-3533dfccd3a1" />
+    <timestamp value="2022-01-07T13:54:44+00:00" />
+    <total value="2" />
+    <offset value="0" />
     <parameter>
-      <name value="version"/>
-      <valueUri value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ProblemSignificance|1.0.0"/>
+      <name value="version" />
+      <valueUri value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ProblemSignificance|1.0.0" />
     </parameter>
     <parameter>
-      <name value="count"/>
-      <valueInteger value="2147483647"/>
+      <name value="count" />
+      <valueInteger value="2147483647" />
     </parameter>
     <parameter>
-      <name value="offset"/>
-      <valueInteger value="0"/>
+      <name value="offset" />
+      <valueInteger value="0" />
     </parameter>
     <contains>
-      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ProblemSignificance"/>
-      <code value="major"/>
-      <display value="Major"/>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ProblemSignificance" />
+      <code value="major" />
+      <display value="Major" />
     </contains>
     <contains>
-      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ProblemSignificance"/>
-      <code value="minor"/>
-      <display value="Minor"/>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ProblemSignificance" />
+      <code value="minor" />
+      <display value="Minor" />
     </contains>
   </expansion>
 </ValueSet>

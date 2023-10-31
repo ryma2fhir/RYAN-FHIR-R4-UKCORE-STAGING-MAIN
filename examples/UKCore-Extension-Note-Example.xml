@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DiagnosticReport xmlns="http://hl7.org/fhir">
-  <id value="UKCore-Extension-Note-Example"/>
+  <id value="UKCore-Extension-Note-Example" />
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.note">
         <valueAnnotation>
             <authorReference>
@@ -11,22 +11,22 @@
         </valueAnnotation>
     </extension>
   <identifier>
-    <system value="https://tools.ietf.org/html/rfc4122"/>
-    <value value="957d702f-7e9e-43c2-b783-978f2c164b3c"/>
+    <system value="https://tools.ietf.org/html/rfc4122" />
+    <value value="957d702f-7e9e-43c2-b783-978f2c164b3c" />
   </identifier>
-  <status value="final"/>
+  <status value="final" />
   <code>
     <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="104177005"/>
-      <display value="Blood culture for bacteria, including anaerobic screen"/>
+      <system value="http://snomed.info/sct" />
+      <code value="104177005" />
+      <display value="Blood culture for bacteria, including anaerobic screen" />
     </coding>
   </code>
   <subject>
-    <reference value="Patient/UKCore-Patient-RichardSmith-Example"/>
+    <reference value="Patient/UKCore-Patient-RichardSmith-Example" />
   </subject>
   <performer>
-    <reference value="Organization/UKCore-Organization-LeedsTeachingHospital-Example"/>
-    <display value="LEEDS TEACHING HOSPITALS NHS TRUST"/>
+    <reference value="Organization/UKCore-Organization-LeedsTeachingHospital-Example" />
+    <display value="LEEDS TEACHING HOSPITALS NHS TRUST" />
   </performer>
 </DiagnosticReport>

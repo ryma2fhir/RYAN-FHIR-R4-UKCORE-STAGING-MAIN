@@ -17,16 +17,16 @@
     </coding>
   </code>
   <subject>
-    <reference value="Patient/UKCore-Patient-RichardSmith-Example"/>
+    <reference value="Patient/UKCore-Patient-RichardSmith-Example" />
   </subject>
-  <effectiveDateTime value="2023-08-10"/>
+  <effectiveDateTime value="2023-08-10" />
   <performer>
     <reference value="Organization/UKCore-Organization-LeedsTeachingHospital-Example" />
   </performer>
   <valueQuantity>
-    <value value="20"/>
-    <code value="/d"/>
-    <system value="http://unitsofmeasure.org"/>
-    <unit value="per day"/>
+    <value value="20" />
+    <code value="/d" />
+    <system value="http://unitsofmeasure.org" />
+    <unit value="per day" />
   </valueQuantity>
 </Observation>

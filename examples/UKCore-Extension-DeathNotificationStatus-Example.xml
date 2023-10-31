@@ -6,14 +6,14 @@
     <extension url="deathNotificationStatus">
       <valueCodeableConcept>
         <coding>
-          <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-DeathNotificationStatus"/>
-          <code value="U"/>
-          <display value="Removed"/>
+          <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-DeathNotificationStatus" />
+          <code value="U" />
+          <display value="Removed" />
         </coding>
       </valueCodeableConcept>
     </extension>
     <extension url="systemEffectiveDate">
-      <valueDateTime value="2019-08-01T00:00:00.000Z"/>
+      <valueDateTime value="2019-08-01T00:00:00.000Z" />
     </extension>
   </extension>
   <!-- **************extension end************** -->

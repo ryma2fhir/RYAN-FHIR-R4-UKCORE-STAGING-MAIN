@@ -1,12 +1,12 @@
 <FamilyMemberHistory xmlns="http://hl7.org/fhir">
-  <id value="UKCore-Extension-Participant-Example"/>
+  <id value="UKCore-Extension-Participant-Example" />
   <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-FamilyMemberHistory.participant">
     <extension url="function">
       <valueCodeableConcept>
         <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
-          <code value="enterer"/>
-          <display value="Enterer"/>
+          <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
+          <code value="enterer" />
+          <display value="Enterer" />
         </coding>
       </valueCodeableConcept>
     </extension>
@@ -16,40 +16,40 @@
       </valueReference>
     </extension>
   </extension>
-  <status value="partial"/>
+  <status value="partial" />
   <patient>
-    <reference value="Patient/UKCore-Patient-RichardSmith-Example"/>
-    <display value="Richard Smith"/>
+    <reference value="Patient/UKCore-Patient-RichardSmith-Example" />
+    <display value="Richard Smith" />
   </patient>
-  <date value="2023-05-10"/>
+  <date value="2023-05-10" />
   <relationship>
     <coding>
-      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
-      <code value="FTH"/>
-      <display value="father"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode" />
+      <code value="FTH" />
+      <display value="father" />
     </coding>
   </relationship>
   <sex>
     <coding>
-      <system value="http://hl7.org/fhir/administrative-gender"/>
-      <code value="male"/>
-      <display value="Male"/>
+      <system value="http://hl7.org/fhir/administrative-gender" />
+      <code value="male" />
+      <display value="Male" />
     </coding>
   </sex>
-  <bornDate value="1949-12-13"/>
+  <bornDate value="1949-12-13" />
   <condition>
     <code>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="160308005"/>
-        <display value="Family history: Gout"/>
+        <system value="http://snomed.info/sct" />
+        <code value="160308005" />
+        <display value="Family history: Gout" />
       </coding>
     </code>
     <onsetAge>
-      <value value="64"/>
-      <unit value="year"/>
-      <system value="http://unitsofmeasure.org"/>
-      <code value="a"/>
+      <value value="64" />
+      <unit value="year" />
+      <system value="http://unitsofmeasure.org" />
+      <code value="a" />
     </onsetAge>
   </condition>
 </FamilyMemberHistory>

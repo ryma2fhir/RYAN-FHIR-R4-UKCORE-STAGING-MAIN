@@ -10,8 +10,8 @@
   <contact>
   <name value="HL7 UK" />
   <telecom>
-      <system value="email"/>
-      <value value="ukcore@hl7.org.uk"/>
+      <system value="email" />
+      <value value="ukcore@hl7.org.uk" />
       <use value="work" />
       <rank value="1" />
     </telecom>

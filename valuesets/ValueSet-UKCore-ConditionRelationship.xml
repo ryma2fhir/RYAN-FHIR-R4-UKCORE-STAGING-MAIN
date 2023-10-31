@@ -24,51 +24,51 @@
     </include>
   </compose>
   <expansion>
-    <identifier value="b838d621-4cd6-4396-a3d0-604fa6529ab3"/>
-    <timestamp value="2022-01-07T11:36:04+00:00"/>
-    <total value="6"/>
-    <offset value="0"/>
+    <identifier value="b838d621-4cd6-4396-a3d0-604fa6529ab3" />
+    <timestamp value="2022-01-07T11:36:04+00:00" />
+    <total value="6" />
+    <offset value="0" />
     <parameter>
-      <name value="version"/>
-      <valueUri value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship|1.0.0"/>
+      <name value="version" />
+      <valueUri value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship|1.0.0" />
     </parameter>
     <parameter>
-      <name value="count"/>
-      <valueInteger value="2147483647"/>
+      <name value="count" />
+      <valueInteger value="2147483647" />
     </parameter>
     <parameter>
-      <name value="offset"/>
-      <valueInteger value="0"/>
+      <name value="offset" />
+      <valueInteger value="0" />
     </parameter>
     <contains>
-      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship"/>
-      <code value="child"/>
-      <display value="Child"/>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship" />
+      <code value="child" />
+      <display value="Child" />
     </contains>
     <contains>
-      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship"/>
-      <code value="evolve"/>
-      <display value="Evolve"/>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship" />
+      <code value="evolve" />
+      <display value="Evolve" />
     </contains>
     <contains>
-      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship"/>
-      <code value="merge-combine"/>
-      <display value="Merge/Combine"/>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship" />
+      <code value="merge-combine" />
+      <display value="Merge/Combine" />
     </contains>
     <contains>
-      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship"/>
-      <code value="nesting"/>
-      <display value="Nesting"/>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship" />
+      <code value="nesting" />
+      <display value="Nesting" />
     </contains>
     <contains>
-      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship"/>
-      <code value="parent"/>
-      <display value="Parent"/>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship" />
+      <code value="parent" />
+      <display value="Parent" />
     </contains>
     <contains>
-      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship"/>
-      <code value="sibling"/>
-      <display value="Sibling"/>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-ConditionRelationship" />
+      <code value="sibling" />
+      <display value="Sibling" />
     </contains>
   </expansion>
 </ValueSet>

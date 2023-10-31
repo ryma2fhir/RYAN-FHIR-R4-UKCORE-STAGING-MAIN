@@ -24,31 +24,31 @@
     </include>
   </compose>
   <expansion>
-    <identifier value="dbfa87bc-78e2-4d76-8753-571ed1a3c9bf"/>
-    <timestamp value="2022-01-07T13:33:42+00:00"/>
-    <total value="2"/>
-    <offset value="0"/>
+    <identifier value="dbfa87bc-78e2-4d76-8753-571ed1a3c9bf" />
+    <timestamp value="2022-01-07T13:33:42+00:00" />
+    <total value="2" />
+    <offset value="0" />
     <parameter>
-      <name value="version"/>
-      <valueUri value="https://fhir.hl7.org.uk/CodeSystem/UKCore-LegalStatusContext|1.0.0"/>
+      <name value="version" />
+      <valueUri value="https://fhir.hl7.org.uk/CodeSystem/UKCore-LegalStatusContext|1.0.0" />
     </parameter>
     <parameter>
-      <name value="count"/>
-      <valueInteger value="2147483647"/>
+      <name value="count" />
+      <valueInteger value="2147483647" />
     </parameter>
     <parameter>
-      <name value="offset"/>
-      <valueInteger value="0"/>
+      <name value="offset" />
+      <valueInteger value="0" />
     </parameter>
     <contains>
-      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-LegalStatusContext"/>
-      <code value="admission"/>
-      <display value="Admission"/>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-LegalStatusContext" />
+      <code value="admission" />
+      <display value="Admission" />
     </contains>
     <contains>
-      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-LegalStatusContext"/>
-      <code value="discharge"/>
-      <display value="Discharge"/>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-LegalStatusContext" />
+      <code value="discharge" />
+      <display value="Discharge" />
     </contains>
   </expansion>
 </ValueSet>

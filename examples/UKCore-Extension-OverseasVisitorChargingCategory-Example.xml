@@ -5,9 +5,9 @@
   <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-OverseasVisitorChargingCategory">
     <valueCodeableConcept>
       <coding>
-        <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-OverseasVisitorChargingCategory"/>
-        <code value="D"/>
-        <display value="Chargeable European Economic Area patient"/>
+        <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-OverseasVisitorChargingCategory" />
+        <code value="D" />
+        <display value="Chargeable European Economic Area patient" />
       </coding>
     </valueCodeableConcept>
   </extension>

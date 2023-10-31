@@ -1,13 +1,13 @@
 <Observation xmlns="http://hl7.org/fhir">
-  <id value="UKCore-Observation-VitalSigns-BodyTemperature-Example"/>
-  <status value="final"/>
+  <id value="UKCore-Observation-VitalSigns-BodyTemperature-Example" />
+  <status value="final" />
   <category>
     <coding>
-      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-      <code value="vital-signs"/>
-      <display value="Vital Signs"/>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="vital-signs" />
+      <display value="Vital Signs" />
     </coding>
-    <text value="Vital Signs"/>
+    <text value="Vital Signs" />
   </category>
   <code>
         <coding>
@@ -22,11 +22,11 @@
         </coding>
   </code>
   <subject>
-    <reference value="Patient/UKCore-Patient-RichardSmith-Example"/>
+    <reference value="Patient/UKCore-Patient-RichardSmith-Example" />
   </subject>
-  <effectiveDateTime value="2023-08-10"/>
+  <effectiveDateTime value="2023-08-10" />
   <performer>
-    <reference value="Organization/UKCore-Organization-LeedsTeachingHospital-Example"/>
+    <reference value="Organization/UKCore-Organization-LeedsTeachingHospital-Example" />
   </performer>
     <valueQuantity>
         <value value="36.5" />

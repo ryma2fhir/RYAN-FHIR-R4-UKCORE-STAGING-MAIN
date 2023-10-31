@@ -30,93 +30,93 @@
   </compose>
   <expansion>
     <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
-      <valueBoolean value="true"/>
+      <valueBoolean value="true" />
     </extension>
-    <identifier value="47b6bc4c-4e11-45b8-b6ea-16886bad0fe8"/>
-    <timestamp value="2022-01-07T10:21:26+00:00"/>
-    <total value="14"/>
-    <offset value="0"/>
+    <identifier value="47b6bc4c-4e11-45b8-b6ea-16886bad0fe8" />
+    <timestamp value="2022-01-07T10:21:26+00:00" />
+    <total value="14" />
+    <offset value="0" />
     <parameter>
-      <name value="version"/>
-      <valueUri value="http://snomed.info/sct|http://snomed.info/sct/83821000000107/version/20211222"/>
+      <name value="version" />
+      <valueUri value="http://snomed.info/sct|http://snomed.info/sct/83821000000107/version/20211222" />
     </parameter>
     <parameter>
-      <name value="count"/>
-      <valueInteger value="2147483647"/>
+      <name value="count" />
+      <valueInteger value="2147483647" />
     </parameter>
     <parameter>
-      <name value="offset"/>
-      <valueInteger value="0"/>
+      <name value="offset" />
+      <valueInteger value="0" />
     </parameter>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="717341000000101"/>
-      <display value="Alerts"/>
+      <system value="http://snomed.info/sct" />
+      <code value="717341000000101" />
+      <display value="Alerts" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="325931000000109"/>
-      <display value="Assessment"/>
+      <system value="http://snomed.info/sct" />
+      <code value="325931000000109" />
+      <display value="Assessment" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="734163000"/>
-      <display value="Care plan"/>
+      <system value="http://snomed.info/sct" />
+      <code value="734163000" />
+      <display value="Care plan" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="706825008"/>
-      <display value="Chart"/>
+      <system value="http://snomed.info/sct" />
+      <code value="706825008" />
+      <display value="Chart" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="371525003"/>
-      <display value="Clinical procedure report"/>
+      <system value="http://snomed.info/sct" />
+      <code value="371525003" />
+      <display value="Clinical procedure report" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="373942005"/>
-      <display value="Discharge summary"/>
+      <system value="http://snomed.info/sct" />
+      <code value="373942005" />
+      <display value="Discharge summary" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="717131000000107"/>
-      <display value="Health characteristics"/>
+      <system value="http://snomed.info/sct" />
+      <code value="717131000000107" />
+      <display value="Health characteristics" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="25831000000103"/>
-      <display value="Image (document)"/>
+      <system value="http://snomed.info/sct" />
+      <code value="25831000000103" />
+      <display value="Image (document)" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="823751000000102"/>
-      <display value="Letter"/>
+      <system value="http://snomed.info/sct" />
+      <code value="823751000000102" />
+      <display value="Letter" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="933361000000108"/>
-      <display value="Medications and medical devices"/>
+      <system value="http://snomed.info/sct" />
+      <code value="933361000000108" />
+      <display value="Medications and medical devices" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="715311000000107"/>
-      <display value="Notification administration"/>
+      <system value="http://snomed.info/sct" />
+      <code value="715311000000107" />
+      <display value="Notification administration" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="38651000000103"/>
-      <display value="Other note"/>
+      <system value="http://snomed.info/sct" />
+      <code value="38651000000103" />
+      <display value="Other note" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="419891008"/>
-      <display value="Record artefact"/>
+      <system value="http://snomed.info/sct" />
+      <code value="419891008" />
+      <display value="Record artefact" />
     </contains>
     <contains>
-      <system value="http://snomed.info/sct"/>
-      <code value="25611000000107"/>
-      <display value="Referral letter"/>
+      <system value="http://snomed.info/sct" />
+      <code value="25611000000107" />
+      <display value="Referral letter" />
     </contains>
   </expansion>
 </ValueSet>

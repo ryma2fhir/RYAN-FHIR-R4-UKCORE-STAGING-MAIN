@@ -29,7 +29,7 @@
   <valueQuantity>
     <value value="3.9" />
     <unit value="10*12/L" />
-    <system value="http://unitsofmeasure.org"/>
+    <system value="http://unitsofmeasure.org" />
   </valueQuantity>
   <specimen>
     <reference value="Specimen/UKCore-Specimen-BloodSpecimen-Example" />

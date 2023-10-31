@@ -4,18 +4,18 @@
   <contact>
     <!-- **************extension start************** -->
     <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-ContactRank">
-      <valuePositiveInt value="1"/>
+      <valuePositiveInt value="1" />
     </extension>
     <!-- **************extension end************** -->
   <name>
-    <use value="official"/>
-    <family value="CARTER"/>
-    <given value="Emily"/>
+    <use value="official" />
+    <family value="CARTER" />
+    <given value="Emily" />
   </name>
   <telecom>
-    <system value="phone"/>
-    <value value="01131231288"/>
+    <system value="phone" />
+    <value value="01131231288" />
   </telecom>
-  <gender value="female"/>
+  <gender value="female" />
   </contact>
 </Patient>
