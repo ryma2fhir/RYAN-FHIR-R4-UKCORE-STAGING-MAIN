@@ -1,4 +1,4 @@
-<CapabilityStatement xmlns="http://hl7.org/fhir" >
+<CapabilityStatement xmlns="http://hl7.org/fhir">
 	<id value="apim-conformance"/>
 	<url value="https://fhir.hl7.org.uk/CapabilityStatement/ukcore-conformance"/>
 	<version value="3.2.0"/>
