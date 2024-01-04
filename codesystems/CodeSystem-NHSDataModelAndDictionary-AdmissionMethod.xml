@@ -1,5 +1,5 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="NHSDataModelAndDictionary-AdmissionMethod" />
+  <id value="NHSDataModelAndDictionary-AdmissionMethod"/>
   <url value="https://fhir.hl7.org.uk/CodeSystem/NHSDataModelAndDictionary-AdmissionMethod" />
   <version value="2.0.0" />
   <name value="NHSDataModelandDictionaryAdmissionMethod" />
