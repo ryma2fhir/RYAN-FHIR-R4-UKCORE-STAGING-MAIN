@@ -1,0 +1,8 @@
+{
+	"strict-validation": "false",
+	"terminology": "true",
+	"ignore-folders": [],
+	"test-folders": [
+		"examples"
+	]
+}
