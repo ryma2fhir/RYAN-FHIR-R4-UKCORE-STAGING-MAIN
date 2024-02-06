@@ -1,5 +1,5 @@
 {
-    "strict-validation": true,
+    "fstrict-validation": true,
     "ignore-folders": [],
     "ignore-files": []
 }
