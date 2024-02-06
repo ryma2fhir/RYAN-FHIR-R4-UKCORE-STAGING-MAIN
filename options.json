@@ -1,5 +1,5 @@
 {
-    "tstrict-validation": false,
+    "strict-validation": false,
     "ignore-folders": [],
     "ignore-files": []
 }
