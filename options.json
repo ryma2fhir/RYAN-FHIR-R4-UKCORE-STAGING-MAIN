@@ -1,5 +1,5 @@
 {
     "strict-validation": false,
     "ignore-folders": [],
-    "ignore-files": ["README.md",".gitignore"]
+    "ignore-file": []
 }
