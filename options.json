@@ -1,5 +1,5 @@
 {
-    "strict-validation": false,
-    "ignore-folders": ["guides"],
-    "ignore-files": ["options.json"]
+    "strict-validation": true,
+    "ignore-folders": [],
+    "ignore-files": []
 }
