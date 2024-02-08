@@ -1,0 +1,79 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-Observation-VitalSigns-HeartRate",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation-VitalSigns-HeartRate",
+  "version": "1.0.0",
+  "name": "UKCoreObservationVitalSignsHeartRate",
+  "title": "UKCore Observation Vital Signs Heart Rate",
+  "status": "active",
+  "date": "2023-09-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "Defines the additional constraints and extensions on the UK Core Observation Vital Signs profile, for recording the pulse rate vital sign of a patient.",
+  "purpose": "To provide implementers with additional support when implementing heart rate monitoring and to provide a consistent structure to how the data is presented.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation-VitalSigns",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Observation.code.coding:loinc",
+      "path": "Observation.code.coding",
+      "sliceName": "loinc"
+    }, {
+      "id": "Observation.code.coding:loinc.code",
+      "path": "Observation.code.coding.code",
+      "fixedCode": "8867-4"
+    }, {
+      "id": "Observation.code.coding:snomedCT",
+      "path": "Observation.code.coding",
+      "sliceName": "snomedCT",
+      "max": "1",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-HeartRate"
+      }
+    }, {
+      "id": "Observation.code.coding:snomedCT.system",
+      "path": "Observation.code.coding.system",
+      "min": 1
+    }, {
+      "id": "Observation.code.coding:snomedCT.code",
+      "path": "Observation.code.coding.code",
+      "min": 1
+    }, {
+      "id": "Observation.value[x]",
+      "path": "Observation.value[x]",
+      "min": 1,
+      "type": [ {
+        "code": "Quantity"
+      } ]
+    }, {
+      "id": "Observation.value[x].unit",
+      "path": "Observation.value[x].unit",
+      "min": 1,
+      "fixedString": "per minute"
+    }, {
+      "id": "Observation.value[x].system",
+      "path": "Observation.value[x].system",
+      "min": 1,
+      "fixedUri": "http://unitsofmeasure.org"
+    }, {
+      "id": "Observation.value[x].code",
+      "path": "Observation.value[x].code",
+      "min": 1,
+      "fixedCode": "/min"
+    } ]
+  }
+}

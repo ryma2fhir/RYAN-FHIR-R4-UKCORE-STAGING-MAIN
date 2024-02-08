@@ -1,0 +1,104 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-RelatedPerson",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson",
+  "version": "2.5.0",
+  "name": "UKCoreRelatedPerson",
+  "title": "UK Core RelatedPerson",
+  "status": "active",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [RelatedPerson](https://hl7.org/fhir/R4/RelatedPerson.html).",
+  "purpose": "This profile allows exchange of information about a person that is involved in the care for an individual, but who is not the target of healthcare, nor has a formal responsibility in the care process.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "RelatedPerson",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "RelatedPerson.extension:contactPreference",
+      "path": "RelatedPerson.extension",
+      "sliceName": "contactPreference",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-ContactPreference" ]
+      } ]
+    }, {
+      "id": "RelatedPerson.extension:copyCorrespondenceIndicator",
+      "path": "RelatedPerson.extension",
+      "sliceName": "copyCorrespondenceIndicator",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-CopyCorrespondenceIndicator" ]
+      } ]
+    }, {
+      "id": "RelatedPerson.active",
+      "path": "RelatedPerson.active",
+      "mustSupport": true
+    }, {
+      "id": "RelatedPerson.patient",
+      "path": "RelatedPerson.patient",
+      "mustSupport": true
+    }, {
+      "id": "RelatedPerson.relationship",
+      "path": "RelatedPerson.relationship",
+      "mustSupport": true,
+      "binding": {
+        "strength": "extensible",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-PersonRelationshipType"
+      }
+    }, {
+      "id": "RelatedPerson.name",
+      "path": "RelatedPerson.name",
+      "mustSupport": true
+    }, {
+      "id": "RelatedPerson.telecom",
+      "path": "RelatedPerson.telecom",
+      "mustSupport": true
+    }, {
+      "id": "RelatedPerson.telecom.system",
+      "path": "RelatedPerson.telecom.system",
+      "mustSupport": true
+    }, {
+      "id": "RelatedPerson.telecom.system.extension:otherContactSystem",
+      "path": "RelatedPerson.telecom.system.extension",
+      "sliceName": "otherContactSystem",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-OtherContactSystem" ]
+      } ]
+    }, {
+      "id": "RelatedPerson.telecom.value",
+      "path": "RelatedPerson.telecom.value",
+      "mustSupport": true
+    }, {
+      "id": "RelatedPerson.address",
+      "path": "RelatedPerson.address",
+      "mustSupport": true
+    }, {
+      "id": "RelatedPerson.address.line",
+      "path": "RelatedPerson.address.line",
+      "mustSupport": true
+    }, {
+      "id": "RelatedPerson.address.city",
+      "path": "RelatedPerson.address.city",
+      "mustSupport": true
+    }, {
+      "id": "RelatedPerson.address.postalCode",
+      "path": "RelatedPerson.address.postalCode",
+      "mustSupport": true
+    } ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "resourceType": "RequestGroup",
+  "id": "UKCore-RequestGroup-Ciprofloxacin-Example",
+  "status": "completed",
+  "intent": "order",
+  "priority": "routine",
+  "code": {
+    "coding": [ {
+      "system": "http://snomed.info/sct",
+      "code": "33633005",
+      "display": "Prescription of drug"
+    } ]
+  },
+  "subject": {
+    "reference": "Patient/UKCore-Patient-RichardSmith-Example"
+  },
+  "authoredOn": "2023-06-15T15:00:00.000Z",
+  "author": {
+    "reference": "Practitioner/UKCore-Practitioner-ConsultantSandraGose-Example"
+  },
+  "action": [ {
+    "type": {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/action-type",
+        "code": "create"
+      } ]
+    },
+    "selectionBehavior": "any",
+    "action": [ {
+      "id": "UKCore-MedicationRequest-CiprofloxacinOral-Example",
+      "description": "Ciprofloxacin 500mg, twice daily orally.",
+      "resource": {
+        "reference": "MedicationRequest/UKCore-MedicationRequest-CiprofloxacinOral-Example"
+      }
+    }, {
+      "id": "UKCore-MedicationRequest-CiprofloxacinIV-Example",
+      "description": "Ciprofloxacin 400mg, twice daily as IV.",
+      "resource": {
+        "reference": "MedicationRequest/UKCore-MedicationRequest-CiprofloxacinIV-Example"
+      }
+    } ]
+  } ]
+}

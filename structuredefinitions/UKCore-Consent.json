@@ -1,0 +1,89 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-Consent",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Consent",
+  "version": "2.4.0",
+  "name": "UKCoreConsent",
+  "title": "UK Core Consent",
+  "status": "draft",
+  "date": "2023-12-16",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [Consent](https://hl7.org/fhir/R4/Consent.html).",
+  "purpose": "The purpose of this profile is to be used to express a Consent regarding Healthcare. There are four anticipated uses for the Consent Resource, all of which are written or verbal agreements by a healthcare consumer [grantor] or a personal representative, made to an authorised entity [grantee] concerning authorised or restricted actions with any limitations on purpose of use, and handling instructions to which the authorised entity SHALL comply: \r\n- **Privacy Consent Directive**: Agreement to collect, access, use or disclose (share) information. \r\n- **Medical Treatment Consent Directive**: Consent to undergo a specific treatment (or record of refusal to consent). \r\n- **Research Consent Directive**: Consent to participate in research protocol and information sharing required. \r\n- **Advance Care Directives**: Consent to instructions for potentially needed medical treatment (e.g. DNR).",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "mapping": [ {
+    "identity": "workflow",
+    "uri": "http://hl7.org/fhir/workflow",
+    "name": "Workflow Pattern"
+  }, {
+    "identity": "v2",
+    "uri": "http://hl7.org/v2",
+    "name": "HL7 v2 Mapping"
+  }, {
+    "identity": "rim",
+    "uri": "http://hl7.org/v3",
+    "name": "RIM Mapping"
+  }, {
+    "identity": "w5",
+    "uri": "http://hl7.org/fhir/fivews",
+    "name": "FiveWs Pattern Mapping"
+  } ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Consent",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Consent",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Consent.status",
+      "path": "Consent.status",
+      "mustSupport": true
+    }, {
+      "id": "Consent.scope",
+      "path": "Consent.scope",
+      "mustSupport": true
+    }, {
+      "id": "Consent.category",
+      "path": "Consent.category",
+      "mustSupport": true
+    }, {
+      "id": "Consent.patient",
+      "path": "Consent.patient",
+      "mustSupport": true
+    }, {
+      "id": "Consent.dateTime",
+      "path": "Consent.dateTime",
+      "mustSupport": true
+    }, {
+      "id": "Consent.performer",
+      "path": "Consent.performer",
+      "mustSupport": true
+    }, {
+      "id": "Consent.organization",
+      "path": "Consent.organization",
+      "mustSupport": true
+    }, {
+      "id": "Consent.source[x]",
+      "path": "Consent.source[x]",
+      "mustSupport": true
+    }, {
+      "id": "Consent.provision.code",
+      "path": "Consent.provision.code",
+      "binding": {
+        "strength": "preferred",
+        "description": "A code from the SNOMED Clinical Terminology UK coding system that describes a trigger for an exception to a base policy.",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-ConsentException"
+      }
+    } ]
+  }
+}

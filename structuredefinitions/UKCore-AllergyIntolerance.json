@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-AllergyIntolerance",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance",
+  "version": "2.5.0",
+  "name": "UKCoreAllergyIntolerance",
+  "title": "UK Core AllergyIntolerance",
+  "status": "active",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [AllergyIntolerance](https://hl7.org/fhir/R4/AllergyIntolerance.html).",
+  "purpose": "This profile allows a record of a clinical assessment of an allergy or intolerance; a propensity, or a potential risk to an individual, to have an adverse reaction on future exposure to the specified substance, or class of substance. \r\n\r\nWhere a propensity is identified, to record information or evidence about a reaction event that is characterised by any harmful or undesirable physiological response that is specific to the individual and triggered by exposure of an individual to the identified substance or class of substance. \r\n\r\nSubstances include but are not limited to a therapeutic substance administered correctly at an appropriate dosage for the individual; food; material derived from plants or animals; or venom from insect stings. \r\n\r\nThis resource is used to record physical conditions. It SHALL NOT be used to record preferences for or against types of treatment, for example on religious grounds. For such use cases consider the use of the FHIR [Consent](https://hl7.org/fhir/R4/consent.html) resource.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AllergyIntolerance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "AllergyIntolerance.extension:evidence",
+      "path": "AllergyIntolerance.extension",
+      "sliceName": "evidence",
+      "short": "A reference to results of investigations that confirmed the certainty of the diagnosis.",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-Evidence" ]
+      } ]
+    }, {
+      "id": "AllergyIntolerance.clinicalStatus",
+      "path": "AllergyIntolerance.clinicalStatus",
+      "mustSupport": true
+    }, {
+      "id": "AllergyIntolerance.clinicalStatus.extension:allergyIntoleranceEnd",
+      "path": "AllergyIntolerance.clinicalStatus.extension",
+      "sliceName": "allergyIntoleranceEnd",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AllergyIntoleranceEnd" ]
+      } ],
+      "isModifier": false
+    }, {
+      "id": "AllergyIntolerance.verificationStatus",
+      "path": "AllergyIntolerance.verificationStatus",
+      "mustSupport": true
+    }, {
+      "id": "AllergyIntolerance.code",
+      "path": "AllergyIntolerance.code",
+      "min": 1,
+      "mustSupport": true,
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-AllergyCode"
+      }
+    }, {
+      "id": "AllergyIntolerance.patient",
+      "path": "AllergyIntolerance.patient",
+      "mustSupport": true
+    }, {
+      "id": "AllergyIntolerance.reaction",
+      "path": "AllergyIntolerance.reaction",
+      "mustSupport": true
+    }, {
+      "id": "AllergyIntolerance.reaction.substance",
+      "path": "AllergyIntolerance.reaction.substance",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-AllergySubstance"
+      }
+    }, {
+      "id": "AllergyIntolerance.reaction.manifestation",
+      "path": "AllergyIntolerance.reaction.manifestation",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-AllergyManifestation"
+      }
+    }, {
+      "id": "AllergyIntolerance.reaction.severity",
+      "path": "AllergyIntolerance.reaction.severity",
+      "mustSupport": true
+    }, {
+      "id": "AllergyIntolerance.reaction.exposureRoute",
+      "path": "AllergyIntolerance.reaction.exposureRoute",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-SubstanceOrProductAdministrationRoute"
+      }
+    } ]
+  }
+}

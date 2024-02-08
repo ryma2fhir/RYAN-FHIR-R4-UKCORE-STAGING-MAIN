@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-QuestionnaireResponse",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-QuestionnaireResponse",
+  "version": "1.2.0",
+  "name": "UKCoreQuestionnaireResponse",
+  "title": "UK Core QuestionnaireResponse",
+  "status": "draft",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [QuestionnaireResponse](https://hl7.org/fhir/R4/QuestionnaireResponse.html).",
+  "purpose": "This profile describes a structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "QuestionnaireResponse",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "QuestionnaireResponse.identifier",
+      "path": "QuestionnaireResponse.identifier",
+      "mustSupport": true
+    }, {
+      "id": "QuestionnaireResponse.questionnaire",
+      "path": "QuestionnaireResponse.questionnaire",
+      "mustSupport": true
+    }, {
+      "id": "QuestionnaireResponse.status",
+      "path": "QuestionnaireResponse.status",
+      "mustSupport": true
+    }, {
+      "id": "QuestionnaireResponse.subject",
+      "path": "QuestionnaireResponse.subject",
+      "mustSupport": true
+    }, {
+      "id": "QuestionnaireResponse.authored",
+      "path": "QuestionnaireResponse.authored",
+      "mustSupport": true
+    }, {
+      "id": "QuestionnaireResponse.author",
+      "path": "QuestionnaireResponse.author",
+      "mustSupport": true
+    }, {
+      "id": "QuestionnaireResponse.item",
+      "path": "QuestionnaireResponse.item",
+      "mustSupport": true
+    }, {
+      "id": "QuestionnaireResponse.item.linkId",
+      "path": "QuestionnaireResponse.item.linkId",
+      "mustSupport": true
+    }, {
+      "id": "QuestionnaireResponse.item.answer",
+      "path": "QuestionnaireResponse.item.answer",
+      "mustSupport": true
+    } ]
+  }
+}
