@@ -3,7 +3,7 @@
   "id": "UKCore-AllergyIntolerance-Amoxicillin-Example",
   "meta": {
     "profile": [ {
-      "reference" : "AllergyIntolerance/UKCore-AllergyIntolerance"
+      "AllergyIntolerance/UKCore-AllergyIntolerance"
     }]
   },
   "clinicalStatus": {
