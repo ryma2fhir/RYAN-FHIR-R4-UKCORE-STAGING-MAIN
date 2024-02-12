@@ -1,6 +1,6 @@
 {
-    "mstrict-validation": true,
+    "strict-validation": true,
     "ignore-folders": [],
     "ignore-files": [],
-    "merror-if-metaProfile-present": true
+    "error-if-metaProfile-present": true
 }
