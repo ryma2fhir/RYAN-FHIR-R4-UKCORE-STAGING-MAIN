@@ -2,9 +2,9 @@
   "resourceType": "AllergyIntolerance",
   "id": "UKCore-AllergyIntolerance-Amoxicillin-Example",
   "meta": {
-    "profile": [ {
+    "profile": [ 
       "AllergyIntolerance/UKCore-AllergyIntolerance"
-    }]
+    ]
   },
   "clinicalStatus": {
     "coding": [ {
