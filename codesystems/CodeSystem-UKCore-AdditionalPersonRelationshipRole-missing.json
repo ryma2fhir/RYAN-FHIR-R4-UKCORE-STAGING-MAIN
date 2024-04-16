@@ -1,0 +1,39 @@
+{
+  "resourceType": "CodeSystem",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [ {
+    "code": "Agent",
+    "display": "Agent of patient"
+  }, {
+    "code": "Guardian",
+    "display": "Guardian of patient"
+  }, {
+    "code": "Personal",
+    "display": "Personal relationship with the patient"
+  }, {
+    "code": "PolygamousPartner",
+    "display": "Polygamous Partner of patient"
+  }, {
+    "code": "Dependant",
+    "display": "Dependant of patient"
+  }, {
+    "code": "NonDependant",
+    "display": "Non Dependant of patient"
+  }, {
+    "code": "ProxyContact",
+    "display": "Proxy Contact for patient"
+  }, {
+    "code": "ProxyCommunication",
+    "display": "Proxy Communication for patient"
+  }, {
+    "code": "ProxyContactCommunication",
+    "display": "Proxy Contact and Communication for patient"
+  }, {
+    "code": "Carer",
+    "display": "Carer of patient"
+  }, {
+    "code": "NotSpecified",
+    "display": "Not Specified"
+  } ]
+}

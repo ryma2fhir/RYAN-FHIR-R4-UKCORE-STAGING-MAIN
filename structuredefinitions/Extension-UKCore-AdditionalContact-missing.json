@@ -1,0 +1,40 @@
+{
+  "resourceType": "StructureDefinition",
+  "fhirVersion": "4.0.1",
+  "mapping": [ {
+    "identity": "rim",
+    "uri": "http://hl7.org/v3",
+    "name": "RIM Mapping"
+  } ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [ {
+    "type": "element",
+    "expression": "ServiceRequest"
+  } ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Extension",
+      "path": "Extension",
+      "short": "Details of an additional contact",
+      "definition": "Details of an additional contact, who should be contacted regarding questions arising from the service request."
+    }, {
+      "id": "Extension.url",
+      "path": "Extension.url",
+      "fixedUri": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AdditionalContact"
+    }, {
+      "id": "Extension.value[x]",
+      "path": "Extension.value[x]",
+      "short": "A link to a the resource to be contacted.",
+      "definition": "A link to the Organization, Practitioner, or PractitionerRole resource to be contacted.",
+      "min": 1,
+      "type": [ {
+        "code": "Reference",
+        "targetProfile": [ "http://hl7.org/fhir/StructureDefinition/Organization", "http://hl7.org/fhir/StructureDefinition/Practitioner", "http://hl7.org/fhir/StructureDefinition/PractitionerRole" ]
+      } ]
+    } ]
+  }
+}

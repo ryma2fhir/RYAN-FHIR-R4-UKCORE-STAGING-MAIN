@@ -1,0 +1,80 @@
+{
+  "resourceType": "StructureDefinition",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AllergyIntolerance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "AllergyIntolerance.extension:evidence",
+      "path": "AllergyIntolerance.extension",
+      "sliceName": "evidence",
+      "short": "A reference to results of investigations that confirmed the certainty of the diagnosis.",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-Evidence" ]
+      } ]
+    }, {
+      "id": "AllergyIntolerance.clinicalStatus",
+      "path": "AllergyIntolerance.clinicalStatus",
+      "mustSupport": true
+    }, {
+      "id": "AllergyIntolerance.clinicalStatus.extension:allergyIntoleranceEnd",
+      "path": "AllergyIntolerance.clinicalStatus.extension",
+      "sliceName": "allergyIntoleranceEnd",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AllergyIntoleranceEnd" ]
+      } ],
+      "isModifier": false
+    }, {
+      "id": "AllergyIntolerance.verificationStatus",
+      "path": "AllergyIntolerance.verificationStatus",
+      "mustSupport": true
+    }, {
+      "id": "AllergyIntolerance.code",
+      "path": "AllergyIntolerance.code",
+      "min": 1,
+      "mustSupport": true,
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-AllergyCode"
+      }
+    }, {
+      "id": "AllergyIntolerance.patient",
+      "path": "AllergyIntolerance.patient",
+      "mustSupport": true
+    }, {
+      "id": "AllergyIntolerance.reaction",
+      "path": "AllergyIntolerance.reaction",
+      "mustSupport": true
+    }, {
+      "id": "AllergyIntolerance.reaction.substance",
+      "path": "AllergyIntolerance.reaction.substance",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-AllergySubstance"
+      }
+    }, {
+      "id": "AllergyIntolerance.reaction.manifestation",
+      "path": "AllergyIntolerance.reaction.manifestation",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-AllergyManifestation"
+      }
+    }, {
+      "id": "AllergyIntolerance.reaction.severity",
+      "path": "AllergyIntolerance.reaction.severity",
+      "mustSupport": true
+    }, {
+      "id": "AllergyIntolerance.reaction.exposureRoute",
+      "path": "AllergyIntolerance.reaction.exposureRoute",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-SubstanceOrProductAdministrationRoute"
+      }
+    } ]
+  }
+}

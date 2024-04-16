@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "compose": {
+    "include": [ {
+      "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType"
+    } ]
+  },
+  "expansion": {
+    "identifier": "ecf148bc-2e81-4fd0-b411-d54020d64198",
+    "timestamp": "2021-09-10T07:49:44+00:00",
+    "total": 2,
+    "offset": 0,
+    "parameter": [ {
+      "name": "version",
+      "valueUri": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType|2.1.0"
+    }, {
+      "name": "count",
+      "valueInteger": 2147483647
+    }, {
+      "name": "offset",
+      "valueInteger": 0
+    } ],
+    "contains": [ {
+      "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+      "code": "PAF",
+      "display": "Postcode Address File"
+    }, {
+      "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+      "code": "UPRN",
+      "display": "Unique Property Reference Number"
+    } ]
+  }
+}
