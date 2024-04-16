@@ -1,0 +1,19 @@
+{
+  "resourceType": "Patient",
+  "id": "UKCore-Extension-NHSNumberUnavailableReason-Example",
+  "extension": [ {
+    "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSNumberUnavailableReason",
+    "valueCodeableConcept": {
+      "coding": [ {
+        "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-NHSNumberUnavailableReason",
+        "code": "overseas-patient",
+        "display": "Overseas patient"
+      } ]
+    }
+  } ],
+  "name": [ {
+    "use": "official",
+    "family": "BAPTISTE",
+    "given": [ "Jean" ]
+  } ]
+}

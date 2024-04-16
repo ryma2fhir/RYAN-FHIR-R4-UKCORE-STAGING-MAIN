@@ -1,0 +1,66 @@
+{
+  "resourceType": "Task",
+  "id": "UKCore-Task-Colonoscopy-Example",
+  "identifier": [ {
+    "system": "https://tools.ietf.org/html/rfc4122",
+    "value": "b269d1d7-1acf-47bb-8b3c-e38b583d9a07"
+  } ],
+  "status": "in-progress",
+  "intent": "order",
+  "priority": "routine",
+  "code": {
+    "coding": [ {
+      "system": "http://hl7.org/fhir/CodeSystem/task-code",
+      "code": "fulfill",
+      "display": "Fulfill the focal request"
+    } ]
+  },
+  "focus": {
+    "reference": "ServiceRequest/UKCore-ServiceRequest-ColonoscopyRequest-Example",
+    "display": "Colonoscopy Request"
+  },
+  "for": {
+    "reference": "Patient/UKCore-Patient-RichardSmith-Example",
+    "display": "Richard Smith"
+  },
+  "encounter": {
+    "reference": "Encounter/UKCore-Encounter-InpatientEncounter-Example",
+    "display": "In-Patient Encounter"
+  },
+  "executionPeriod": {
+    "start": "2021-10-13T16:20:27+07:00",
+    "end": "2021-10-13T18:20:27+07:00"
+  },
+  "authoredOn": "2021-10-13T16:20:27+07:00",
+  "lastModified": "2021-10-13T16:20:27+07:00",
+  "requester": {
+    "reference": "Practitioner/UKCore-Practitioner-DoctorPaulRastall-Example",
+    "display": "Dr Paul Rastall"
+  },
+  "performerType": [ {
+    "coding": [ {
+      "system": "http://snomed.info/sct",
+      "code": "71838004",
+      "display": "Gastroenterologist"
+    } ],
+    "text": "Performer"
+  } ],
+  "owner": {
+    "reference": "Practitioner/UKCore-Practitioner-ConsultantSandraGose-Example",
+    "display": "Dr Sandra Gose"
+  },
+  "restriction": {
+    "repetitions": 1,
+    "period": {
+      "end": "2021-10-13T18:30:00+07:00"
+    }
+  },
+  "output": [ {
+    "type": {
+      "text": "Colonoscopy Appointment"
+    },
+    "valueReference": {
+      "reference": "ServiceRequest/UKCore-ServiceRequest-ColonoscopyRequest-Example"
+    }
+  } ]
+}

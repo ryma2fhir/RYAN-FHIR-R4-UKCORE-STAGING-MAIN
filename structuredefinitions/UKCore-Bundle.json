@@ -1,0 +1,57 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-Bundle",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Bundle",
+  "version": "2.2.0",
+  "name": "UKCoreBundle",
+  "title": "UK Core Bundle",
+  "status": "draft",
+  "date": "2023-12-16",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [Bundle](https://hl7.org/fhir/R4/Bundle.html).",
+  "purpose": "This profile allows a collection of resources to be exchanged as one bundle.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "mapping": [ {
+    "identity": "v2",
+    "uri": "http://hl7.org/v2",
+    "name": "HL7 v2 Mapping"
+  }, {
+    "identity": "rim",
+    "uri": "http://hl7.org/v3",
+    "name": "RIM Mapping"
+  }, {
+    "identity": "cda",
+    "uri": "http://hl7.org/v3/cda",
+    "name": "CDA (R2)"
+  }, {
+    "identity": "w5",
+    "uri": "http://hl7.org/fhir/fivews",
+    "name": "FiveWs Pattern Mapping"
+  } ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Bundle.type",
+      "path": "Bundle.type",
+      "mustSupport": true
+    }, {
+      "id": "Bundle.entry",
+      "path": "Bundle.entry",
+      "mustSupport": true
+    } ]
+  }
+}

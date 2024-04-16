@@ -1,0 +1,304 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "UKCore-PracticeSettingCodeScotland",
+  "url": "https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCodeScotland",
+  "version": "1.0.1",
+  "name": "UKCorePracticeSettingCodeScotland",
+  "title": "UKCore Practice Setting Code Scotland",
+  "status": "retired",
+  "date": "2023-04-28",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This is the code representing the clinical specialty of the clinician or provider who interacted with, treated, or provided a service to/for the patient. These codes and their descriptions represent concepts used in Scotland and are copied from the content of the [Public Health Scotland](https://www.opendata.nhs.scot/dataset/specialty-codes) web page on 20/10/2022.",
+  "copyright": "Copyright &#169; 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7&#174; FHIR&#174; standard Copyright &#169; 2011+ HL7 The HL7&#174; FHIR&#174; standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [ {
+    "code": "A1",
+    "display": "General Medicine"
+  }, {
+    "code": "A11",
+    "display": "Acute Medicine"
+  }, {
+    "code": "A2",
+    "display": "Cardiology"
+  }, {
+    "code": "A21",
+    "display": "Paediatric Cardiology"
+  }, {
+    "code": "A3",
+    "display": "Clinical Genetics"
+  }, {
+    "code": "A4",
+    "display": "Tropical Medicine"
+  }, {
+    "code": "A5",
+    "display": "Clinical Pharmacology & Therapeutics"
+  }, {
+    "code": "A6",
+    "display": "Infectious Diseases"
+  }, {
+    "code": "A7",
+    "display": "Dermatology"
+  }, {
+    "code": "A8",
+    "display": "Endocrinology & Diabetes"
+  }, {
+    "code": "A81",
+    "display": "Endocrinology"
+  }, {
+    "code": "A82",
+    "display": "Diabetes"
+  }, {
+    "code": "A9",
+    "display": "Gastroenterology"
+  }, {
+    "code": "AA",
+    "display": "Genito-Urinary Medicine"
+  }, {
+    "code": "AB",
+    "display": "Geriatric Medicine"
+  }, {
+    "code": "AC",
+    "display": "Homeopathy"
+  }, {
+    "code": "AD",
+    "display": "Medical Oncology"
+  }, {
+    "code": "AF",
+    "display": "Paediatrics"
+  }, {
+    "code": "AFA",
+    "display": "Community Child Health"
+  }, {
+    "code": "AG",
+    "display": "Renal Medicine"
+  }, {
+    "code": "AH",
+    "display": "Neurology"
+  }, {
+    "code": "AJ",
+    "display": "Integrative Care"
+  }, {
+    "code": "AK",
+    "display": "Occupational Medicine"
+  }, {
+    "code": "AM",
+    "display": "Palliative Medicine"
+  }, {
+    "code": "AN",
+    "display": "Public Health Medicine"
+  }, {
+    "code": "AP",
+    "display": "Rehabilitation Medicine"
+  }, {
+    "code": "AQ",
+    "display": "Respiratory Medicine"
+  }, {
+    "code": "AR",
+    "display": "Rheumatology"
+  }, {
+    "code": "AS",
+    "display": "Sport & Exercise Medicine"
+  }, {
+    "code": "AT",
+    "display": "Medical Ophthalmology"
+  }, {
+    "code": "AV",
+    "display": "Clinical Neurophysiology"
+  }, {
+    "code": "AW",
+    "display": "Allergy"
+  }, {
+    "code": "C1",
+    "display": "General Surgery"
+  }, {
+    "code": "C11",
+    "display": "General Surgery (excl Vascular)"
+  }, {
+    "code": "C12",
+    "display": "Vascular Surgery"
+  }, {
+    "code": "C13",
+    "display": "Oral and Maxillofacial Surgery"
+  }, {
+    "code": "C2",
+    "display": "Accident & Emergency"
+  }, {
+    "code": "C3",
+    "display": "Anaesthetics"
+  }, {
+    "code": "C31",
+    "display": "Pain Management"
+  }, {
+    "code": "C4",
+    "display": "Cardiothoracic Surgery"
+  }, {
+    "code": "C41",
+    "display": "Cardiac Surgery"
+  }, {
+    "code": "C42",
+    "display": "Thoracic Surgery"
+  }, {
+    "code": "C5",
+    "display": "Ear, Nose & Throat (ENT)"
+  }, {
+    "code": "C51",
+    "display": "Audiological Medicine"
+  }, {
+    "code": "C6",
+    "display": "Neurosurgery"
+  }, {
+    "code": "C7",
+    "display": "Ophthalmology"
+  }, {
+    "code": "C8",
+    "display": "Trauma and Orthopaedic Surgery"
+  }, {
+    "code": "C9",
+    "display": "Plastic Surgery"
+  }, {
+    "code": "C91",
+    "display": "Cleft Lip and Palate Surgery"
+  }, {
+    "code": "CA",
+    "display": "Paediatric Surgery"
+  }, {
+    "code": "CB",
+    "display": "Urology"
+  }, {
+    "code": "CC",
+    "display": "Intensive Care Medicine"
+  }, {
+    "code": "D1",
+    "display": "Community Dental Practice"
+  }, {
+    "code": "D2",
+    "display": "General Dental Practice"
+  }, {
+    "code": "D3",
+    "display": "Oral Surgery"
+  }, {
+    "code": "D4",
+    "display": "Oral Medicine"
+  }, {
+    "code": "D5",
+    "display": "Orthodontics"
+  }, {
+    "code": "D6",
+    "display": "Restorative Dentistry"
+  }, {
+    "code": "D61",
+    "display": "Restorative Dentistry - Endodontics"
+  }, {
+    "code": "D62",
+    "display": "Restorative Dentistry - Periodontics"
+  }, {
+    "code": "D63",
+    "display": "Restorative Dentistry - Prosthodontics"
+  }, {
+    "code": "D7",
+    "display": "Dental Public Health"
+  }, {
+    "code": "D8",
+    "display": "Paediatric Dentistry"
+  }, {
+    "code": "D9",
+    "display": "Oral Pathology"
+  }, {
+    "code": "DA",
+    "display": "Oral Microbiology"
+  }, {
+    "code": "DB",
+    "display": "Dental & Maxillofacial Radiology"
+  }, {
+    "code": "DC",
+    "display": "Surgical Dentistry"
+  }, {
+    "code": "DD",
+    "display": "Fixed & Removable Prosthodontics"
+  }, {
+    "code": "DE",
+    "display": "Special Care Dentistry"
+  }, {
+    "code": "E1",
+    "display": "General Practice"
+  }, {
+    "code": "E11",
+    "display": "GP Obstetrics"
+  }, {
+    "code": "E12",
+    "display": "GP Other than Obstetrics"
+  }, {
+    "code": "F1",
+    "display": "Obstetrics & Gynaecology"
+  }, {
+    "code": "F1A",
+    "display": "Well Woman Service"
+  }, {
+    "code": "F1B",
+    "display": "Family Planning Service"
+  }, {
+    "code": "F2",
+    "display": "Gynaecology"
+  }, {
+    "code": "F3",
+    "display": "Obstetrics"
+  }, {
+    "code": "F31",
+    "display": "Obstetrics Ante-Natal"
+  }, {
+    "code": "F32",
+    "display": "Obstetrics Post-Natal"
+  }, {
+    "code": "F4",
+    "display": "Community Sexual & Reproductive Health"
+  }, {
+    "code": "G1",
+    "display": "General Psychiatry (Mental Illness)"
+  }, {
+    "code": "G1A",
+    "display": "Community Psychiatry"
+  }, {
+    "code": "G2",
+    "display": "Child & Adolescent Psychiatry"
+  }, {
+    "code": "G21",
+    "display": "Child Psychiatry"
+  }, {
+    "code": "G22",
+    "display": "Adolescent Psychiatry"
+  }, {
+    "code": "G3",
+    "display": "Forensic Psychiatry"
+  }, {
+    "code": "G4",
+    "display": "Psychiatry of Old Age"
+  }, {
+    "code": "G5",
+    "display": "Learning Disability"
+  }, {
+    "code": "G6",
+    "display": "Psychotherapy"
+  }, {
+    "code": "G61",
+    "display": "Behavioural Psychotherapy"
+  }, {
+    "code": "G62",
+    "display": "Child & Adolescent Psychotherapy"
+  }, {
+    "code": "G63",
+    "display": "Adult Psychotherapy"
+  }, {
+    "code": "H1",
+    "display": "Clinical Radiology"
+  } ]
+}

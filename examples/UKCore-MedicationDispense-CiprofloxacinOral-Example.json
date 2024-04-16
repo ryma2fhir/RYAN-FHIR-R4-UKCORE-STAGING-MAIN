@@ -1,0 +1,66 @@
+{
+  "resourceType": "MedicationDispense",
+  "id": "UKCore-MedicationDispense-CiprofloxacinOral-Example",
+  "status": "completed",
+  "category": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
+      "code": "inpatient",
+      "display": "Inpatient"
+    } ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [ {
+      "system": "https://dmd.nhs.uk",
+      "code": "18460411000001105",
+      "display": "Ciprofloxacin 500mg tablets (Accord-UK Ltd)"
+    } ]
+  },
+  "subject": {
+    "reference": "Patient/UKCore-Patient-RichardSmith-Example"
+  },
+  "supportingInformation": [ {
+    "reference": "RequestGroup/UKCore-RequestGroup-Ciprofloxacin-Example"
+  } ],
+  "performer": [ {
+    "actor": {
+      "reference": "Practitioner/UKCore-Practitioner-PharmacistJimmyChuck-Example"
+    }
+  } ],
+  "authorizingPrescription": [ {
+    "reference": "UKCore-MedicationRequest-CiprofloxacinOral-Example"
+  } ],
+  "quantity": {
+    "value": 20,
+    "unit": "capsule",
+    "system": "http://snomed.info/sct",
+    "code": "732937005"
+  },
+  "daysSupply": {
+    "value": 5,
+    "unit": "Day",
+    "system": "http://unitsofmeasure.org",
+    "code": "d"
+  },
+  "whenPrepared": "2023-06-15T18:00:00+00:00",
+  "receiver": [ {
+    "reference": "Patient/UKCore-Patient-RichardSmith-Example"
+  } ],
+  "dosageInstruction": [ {
+    "text": "Take 1 capsule, twice daily.",
+    "timing": {
+      "repeat": {
+        "frequency": 2,
+        "period": 1,
+        "periodUnit": "d"
+      }
+    },
+    "route": {
+      "coding": [ {
+        "system": "http://snomed.info/sct",
+        "code": "26643006",
+        "display": "Oral"
+      } ]
+    }
+  } ]
+}

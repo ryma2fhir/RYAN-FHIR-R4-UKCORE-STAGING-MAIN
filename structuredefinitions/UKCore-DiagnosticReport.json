@@ -1,0 +1,133 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-DiagnosticReport",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-DiagnosticReport",
+  "version": "2.4.0",
+  "name": "UKCoreDiagnosticReport",
+  "title": "UK Core DiagnosticReport",
+  "status": "active",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [DiagnosticReport](https://hl7.org/fhir/R4/DiagnosticReport.html).",
+  "purpose": "This profile allows exchange of the findings and interpretation of diagnostic tests performed on individuals, groups of individuals, devices and locations and/or specimens derived from these. The report includes clinical context such as requesting and provider information and some mix of atomic results, images, textual and coded interpretations and formatted representation of diagnostic reports.\r\n\r\nNote: this profile SHALL NOT be used where a more specific UK Core profile exists.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "DiagnosticReport.extension:compositionReferenceR5",
+      "path": "DiagnosticReport.extension",
+      "sliceName": "compositionReferenceR5",
+      "short": "A Composition reference for a DiagnosticReport. This is a R5 backport.",
+      "max": "1",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition" ]
+      } ],
+      "isModifier": false
+    }, {
+      "id": "DiagnosticReport.extension:compositionReferenceR5.value[x]",
+      "path": "DiagnosticReport.extension.value[x]",
+      "short": "Reference to a Composition resource.",
+      "definition": "Reference to a Composition resource instance that provides structure for organizing the contents of the DiagnosticReport."
+    }, {
+      "id": "DiagnosticReport.extension:noteR5",
+      "path": "DiagnosticReport.extension",
+      "sliceName": "noteR5",
+      "short": "Comments about the diagnostic report. This is a R5 backport.",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.note" ]
+      } ],
+      "isModifier": false
+    }, {
+      "id": "DiagnosticReport.extension:noteR5.value[x]",
+      "path": "DiagnosticReport.extension.value[x]",
+      "definition": "May include general statements about the diagnostic report, or statements about significant, unexpected or unreliable results values contained within the diagnostic report, or information about its source when relevant to its interpretation."
+    }, {
+      "id": "DiagnosticReport.extension:supportingInfoR5",
+      "path": "DiagnosticReport.extension",
+      "sliceName": "supportingInfoR5",
+      "short": "Additional info supporting the diagnostic report. This is a R5 backport.",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo" ]
+      } ],
+      "isModifier": false
+    }, {
+      "id": "DiagnosticReport.extension:supportingInfoR5.extension",
+      "path": "DiagnosticReport.extension.extension",
+      "min": 2
+    }, {
+      "id": "DiagnosticReport.status",
+      "path": "DiagnosticReport.status",
+      "mustSupport": true
+    }, {
+      "id": "DiagnosticReport.category",
+      "path": "DiagnosticReport.category",
+      "mustSupport": true
+    }, {
+      "id": "DiagnosticReport.code",
+      "path": "DiagnosticReport.code",
+      "mustSupport": true,
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-ReportCode"
+      }
+    }, {
+      "id": "DiagnosticReport.subject",
+      "path": "DiagnosticReport.subject",
+      "mustSupport": true
+    }, {
+      "id": "DiagnosticReport.encounter",
+      "path": "DiagnosticReport.encounter",
+      "mustSupport": true
+    }, {
+      "id": "DiagnosticReport.issued",
+      "path": "DiagnosticReport.issued",
+      "mustSupport": true
+    }, {
+      "id": "DiagnosticReport.performer.extension:deviceReference",
+      "path": "DiagnosticReport.performer.extension",
+      "sliceName": "deviceReference",
+      "max": "1",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-DeviceReference" ]
+      } ],
+      "isModifier": false
+    }, {
+      "id": "DiagnosticReport.resultsInterpreter.extension:deviceReference",
+      "path": "DiagnosticReport.resultsInterpreter.extension",
+      "sliceName": "deviceReference",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-DeviceReference" ]
+      } ],
+      "isModifier": false
+    }, {
+      "id": "DiagnosticReport.result",
+      "path": "DiagnosticReport.result",
+      "mustSupport": true
+    }, {
+      "id": "DiagnosticReport.conclusionCode",
+      "path": "DiagnosticReport.conclusionCode",
+      "binding": {
+        "strength": "preferred"
+      }
+    } ]
+  }
+}

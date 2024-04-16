@@ -1,0 +1,95 @@
+{
+  "resourceType": "ValueSet",
+  "id": "UKCore-BodyHeightMeasurements",
+  "url": "https://fhir.hl7.org.uk/ValueSet/UKCore-BodyHeightMeasurements",
+  "version": "1.0.0",
+  "name": "UKCoreBodyHeightMeasurements",
+  "title": "UK Core Body Height Measurements",
+  "status": "active",
+  "date": "2023-09-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "A code from the SNOMED CT UK coding system for the measurement of body lengths or heights. Selected from the SNOMED CT UK coding system:\r - 248337003 | Height from demispan (observable entity)\r - 1003998008 | Arm demispan (observable entity)\r - DescendantOrSelfOf 50373000 | Body height measure (observable entity)\r - MINUS &nbsp;\r - 925931000000103 | Mid-parental height (observable entity))&nbsp;\r - 925951000000105 | Predicted adult height (observable entity)&nbsp;\r - 248336007 | Pubis to ground height (observable entity)&nbsp;\r - 276350001 | Subischial leg length (observable entity)&nbsp;\r - 1153591001 | Length for age percentile (observable entity)",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "filter": [ {
+        "property": "constraint",
+        "op": "=",
+        "value": "(248337003 OR 1003998008 or descendantOrSelfOf 50373000) MINUS (925931000000103 OR 925951000000105 OR 248336007 OR 276350001 OR 1153591001)"
+      } ]
+    } ]
+  },
+  "expansion": {
+    "identifier": "bf1f8055-a123-421d-9c88-981892e6c285",
+    "timestamp": "2023-10-31T21:13:00+00:00",
+    "total": 14,
+    "offset": 0,
+    "contains": [ {
+      "system": "http://snomed.info/sct",
+      "code": "1003998008",
+      "display": "Arm demispan"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1153637007",
+      "display": "Body height"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1153604005",
+      "display": "Body height for age z-score"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "50373000",
+      "display": "Body height measure"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1162418000",
+      "display": "Estimated body height"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "248337003",
+      "display": "Height from demispan"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1153590000",
+      "display": "Length for age z score"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1162417005",
+      "display": "Pre-amputation estimated body height"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1162392001",
+      "display": "Pre-amputation measured body height"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1149101003",
+      "display": "Recumbent body height"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1162419008",
+      "display": "Self reported body height"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1230278008",
+      "display": "Self reported peak adult body height"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "248335006",
+      "display": "Sitting height"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "248333004",
+      "display": "Standing height"
+    } ]
+  }
+}

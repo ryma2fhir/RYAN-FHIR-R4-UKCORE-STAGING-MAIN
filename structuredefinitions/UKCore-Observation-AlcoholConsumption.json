@@ -1,0 +1,71 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-Observation-AlcoholConsumption",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation-AlcoholConsumption",
+  "version": "1.0.0",
+  "name": "UKCoreObservationAlcoholConsumption",
+  "title": "UKCore Observation Alcohol Consumption",
+  "status": "active",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "Defines the additional constraints and extensions on the UK Core Observation profile, for recording alcohol consumption.",
+  "purpose": "To provide implementers with additional support when implementing gathering and recording the patient's alcohol consumption per day / week",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Observation.status",
+      "path": "Observation.status",
+      "fixedCode": "final"
+    }, {
+      "id": "Observation.category",
+      "path": "Observation.category",
+      "min": 1,
+      "max": "1"
+    }, {
+      "id": "Observation.category.coding.system",
+      "path": "Observation.category.coding.system",
+      "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
+    }, {
+      "id": "Observation.category.coding.code",
+      "path": "Observation.category.coding.code",
+      "fixedCode": "social-history"
+    }, {
+      "id": "Observation.code",
+      "path": "Observation.code",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-AlcoholConsumption"
+      }
+    }, {
+      "id": "Observation.subject",
+      "path": "Observation.subject",
+      "min": 1
+    }, {
+      "id": "Observation.effective[x]",
+      "path": "Observation.effective[x]",
+      "min": 1
+    }, {
+      "id": "Observation.value[x]",
+      "path": "Observation.value[x]",
+      "min": 1,
+      "type": [ {
+        "code": "Quantity"
+      } ]
+    } ]
+  }
+}

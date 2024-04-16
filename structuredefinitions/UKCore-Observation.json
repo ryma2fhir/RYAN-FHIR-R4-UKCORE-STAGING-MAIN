@@ -1,0 +1,134 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-Observation",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation",
+  "version": "2.5.0",
+  "name": "UKCoreObservation",
+  "title": "UK Core Observation",
+  "status": "active",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [Observation](https://hl7.org/fhir/R4/Observation.html).",
+  "purpose": "This profile allows exchange of information of Measurements and simple assertions made about an individual, device or other subject.\r\n\r\nNote: this profile SHALL NOT be used where a more specific UK Core profile exists.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Observation.extension:triggeredByR5",
+      "path": "Observation.extension",
+      "sliceName": "triggeredByR5",
+      "short": "Triggering observation(s). This is a R5 backport.",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy" ]
+      } ]
+    }, {
+      "id": "Observation.extension:triggeredByR5.extension:observation",
+      "path": "Observation.extension.extension",
+      "sliceName": "observation"
+    }, {
+      "id": "Observation.extension:triggeredByR5.extension:observation.value[x]",
+      "path": "Observation.extension.extension.value[x]",
+      "short": "Triggering observation.",
+      "definition": "A reference to the triggering observation."
+    }, {
+      "id": "Observation.extension:triggeredByR5.extension:type",
+      "path": "Observation.extension.extension",
+      "sliceName": "type"
+    }, {
+      "id": "Observation.extension:triggeredByR5.extension:type.value[x]",
+      "path": "Observation.extension.extension.value[x]",
+      "short": "The type of trigger. Reflex | Repeat | Re-run",
+      "definition": "The type of trigger. Reflex | Repeat | Re-run"
+    }, {
+      "id": "Observation.extension:triggeredByR5.extension:reason",
+      "path": "Observation.extension.extension",
+      "sliceName": "reason"
+    }, {
+      "id": "Observation.extension:triggeredByR5.extension:reason.value[x]",
+      "path": "Observation.extension.extension.value[x]",
+      "short": "Reason that the observation was triggered.",
+      "definition": "Provides the reason why this observation was performed as a result of the observation referenced."
+    }, {
+      "id": "Observation.extension:bodyStructureR5",
+      "path": "Observation.extension",
+      "sliceName": "bodyStructureR5",
+      "short": "Observed body structure. This is a R5 backport.",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.bodyStructure" ]
+      } ]
+    }, {
+      "id": "Observation.status",
+      "path": "Observation.status",
+      "mustSupport": true
+    }, {
+      "id": "Observation.category",
+      "path": "Observation.category",
+      "mustSupport": true
+    }, {
+      "id": "Observation.code",
+      "path": "Observation.code",
+      "mustSupport": true,
+      "binding": {
+        "strength": "preferred",
+        "description": "A code from the SNOMED Clinical Terminology UK coding system describing a type of observation",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-ObservationType"
+      }
+    }, {
+      "id": "Observation.subject",
+      "path": "Observation.subject",
+      "mustSupport": true
+    }, {
+      "id": "Observation.effective[x]",
+      "path": "Observation.effective[x]",
+      "mustSupport": true
+    }, {
+      "id": "Observation.performer",
+      "path": "Observation.performer",
+      "mustSupport": true
+    }, {
+      "id": "Observation.value[x]",
+      "path": "Observation.value[x]",
+      "mustSupport": true
+    }, {
+      "id": "Observation.bodySite",
+      "path": "Observation.bodySite",
+      "binding": {
+        "strength": "preferred"
+      }
+    }, {
+      "id": "Observation.method",
+      "path": "Observation.method",
+      "binding": {
+        "strength": "preferred"
+      }
+    }, {
+      "id": "Observation.component",
+      "path": "Observation.component",
+      "mustSupport": true
+    }, {
+      "id": "Observation.component.code",
+      "path": "Observation.component.code",
+      "binding": {
+        "strength": "preferred",
+        "description": "A code from the SNOMED Clinical Terminology UK coding system describing a type of observation",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-ObservationType"
+      }
+    } ]
+  }
+}

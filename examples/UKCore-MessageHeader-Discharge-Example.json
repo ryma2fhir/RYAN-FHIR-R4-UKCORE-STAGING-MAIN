@@ -1,0 +1,28 @@
+{
+  "resourceType": "MessageHeader",
+  "id": "UKCore-MessageHeader-Discharge-Example",
+  "eventCoding": {
+    "system": "http://snomed.info/sct",
+    "code": "306689006",
+    "display": "Discharge to home"
+  },
+  "destination": [ {
+    "endpoint": "urn:nhs:addressing:asid:477121007825",
+    "receiver": {
+      "identifier": {
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "RY6"
+      },
+      "display": "LEEDS COMMUNITY HEALTHCARE NHS TRUST"
+    }
+  } ],
+  "sender": {
+    "reference": "https://directory.spineservices.nhs.uk/Organization/X26"
+  },
+  "source": {
+    "endpoint": "NOROT003"
+  },
+  "focus": [ {
+    "reference": "Encounter/UKCore-Encounter-InpatientEncounter-Example"
+  } ]
+}

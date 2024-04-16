@@ -1,0 +1,53 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Extension-UKCore-RecordingSetting",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-RecordingSetting",
+  "version": "1.0.0",
+  "name": "ExtensionUKCoreRecordingSetting",
+  "title": "Extension UK Core Recording Setting",
+  "status": "active",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "An extension to record the care setting in which an observation was taken.",
+  "purpose": "This extension is a clinical observation use case to record the care setting in which an observation was recorded in.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [ {
+    "type": "element",
+    "expression": "Observation"
+  } ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Extension",
+      "path": "Extension",
+      "short": "An extension to record the care setting in which an observation was taken.",
+      "definition": "This extension allows the recording of the care setting in which an observation was taken."
+    }, {
+      "id": "Extension.url",
+      "path": "Extension.url",
+      "fixedUri": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-RecordingSetting"
+    }, {
+      "id": "Extension.value[x]",
+      "path": "Extension.value[x]",
+      "short": "A set of codes to record the care setting",
+      "min": 1,
+      "type": [ {
+        "code": "CodeableConcept"
+      } ]
+    } ]
+  }
+}

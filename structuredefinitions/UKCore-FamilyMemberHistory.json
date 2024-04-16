@@ -1,0 +1,115 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-FamilyMemberHistory",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-FamilyMemberHistory",
+  "version": "1.2.0",
+  "name": "UKCoreFamilyMemberHistory",
+  "title": "UKCore FamilyMemberHistory",
+  "status": "active",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [FamilyMemberHistory](https://hl7.org/fhir/R4/familymemberhistory.html).",
+  "purpose": "This profile allows exchange of information about health events and conditions for a person related to the patient relevant in the context of care.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "FamilyMemberHistory",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "FamilyMemberHistory.extension:associatedEncounter",
+      "path": "FamilyMemberHistory.extension",
+      "sliceName": "associatedEncounter",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AssociatedEncounter" ]
+      } ],
+      "isModifier": false
+    }, {
+      "id": "FamilyMemberHistory.extension:participantR5",
+      "path": "FamilyMemberHistory.extension",
+      "sliceName": "participantR5",
+      "short": "Who or what participated in the activities related to the family member history. This is a R5 backport.",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "http://hl7.org/fhir/5.0/StructureDefinition/extension-FamilyMemberHistory.participant" ]
+      } ],
+      "isModifier": false
+    }, {
+      "id": "FamilyMemberHistory.extension:participantR5.extension:function",
+      "path": "FamilyMemberHistory.extension.extension",
+      "sliceName": "function"
+    }, {
+      "id": "FamilyMemberHistory.extension:participantR5.extension:function.value[x]",
+      "path": "FamilyMemberHistory.extension.extension.value[x]",
+      "short": "The type of involvement in the activities related to the family member history",
+      "definition": "This FHIR value set is comprised of Actor participation Type codes, which can be used to value FHIR agents, actors, and other role elements. The codes are intended to express how the agent participated in some activity. Sometimes referred to the agent functional-role relative to the activity."
+    }, {
+      "id": "FamilyMemberHistory.extension:participantR5.extension:actor",
+      "path": "FamilyMemberHistory.extension.extension",
+      "sliceName": "actor"
+    }, {
+      "id": "FamilyMemberHistory.extension:participantR5.extension:actor.value[x]",
+      "path": "FamilyMemberHistory.extension.extension.value[x]",
+      "short": "Who or what participated in the activities related to the family member history",
+      "definition": "A reference to a Patient, Practitioner, PractitionerRole, RelatedPerson, Device, Organization, or CareTeam."
+    }, {
+      "id": "FamilyMemberHistory.status",
+      "path": "FamilyMemberHistory.status",
+      "mustSupport": true
+    }, {
+      "id": "FamilyMemberHistory.dataAbsentReason",
+      "path": "FamilyMemberHistory.dataAbsentReason",
+      "binding": {
+        "strength": "extensible"
+      }
+    }, {
+      "id": "FamilyMemberHistory.patient",
+      "path": "FamilyMemberHistory.patient",
+      "mustSupport": true
+    }, {
+      "id": "FamilyMemberHistory.date",
+      "path": "FamilyMemberHistory.date",
+      "mustSupport": true
+    }, {
+      "id": "FamilyMemberHistory.name",
+      "path": "FamilyMemberHistory.name",
+      "mustSupport": true
+    }, {
+      "id": "FamilyMemberHistory.relationship",
+      "path": "FamilyMemberHistory.relationship",
+      "mustSupport": true,
+      "binding": {
+        "strength": "extensible",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-PersonRelationshipType"
+      }
+    }, {
+      "id": "FamilyMemberHistory.condition",
+      "path": "FamilyMemberHistory.condition",
+      "mustSupport": true
+    }, {
+      "id": "FamilyMemberHistory.condition.code",
+      "path": "FamilyMemberHistory.condition.code",
+      "binding": {
+        "strength": "preferred"
+      }
+    }, {
+      "id": "FamilyMemberHistory.condition.outcome",
+      "path": "FamilyMemberHistory.condition.outcome",
+      "binding": {
+        "strength": "preferred"
+      }
+    } ]
+  }
+}

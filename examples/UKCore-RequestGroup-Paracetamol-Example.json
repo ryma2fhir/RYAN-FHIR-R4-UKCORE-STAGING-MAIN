@@ -1,0 +1,43 @@
+{
+  "resourceType": "RequestGroup",
+  "id": "UKCore-RequestGroup-Paracetamol-Example",
+  "status": "completed",
+  "intent": "order",
+  "priority": "routine",
+  "code": {
+    "coding": [ {
+      "system": "http://snomed.info/sct",
+      "code": "33633005",
+      "display": "Prescription of drug"
+    } ]
+  },
+  "subject": {
+    "reference": "Patient/UKCore-Patient-RichardSmith-Example"
+  },
+  "authoredOn": "2023-06-15T15:00:00.000Z",
+  "author": {
+    "reference": "Practitioner/UKCore-Practitioner-ConsultantSandraGose-Example"
+  },
+  "action": [ {
+    "type": {
+      "coding": [ {
+        "system": "http://terminology.hl7.org/CodeSystem/action-type",
+        "code": "create"
+      } ]
+    },
+    "selectionBehavior": "at-most-one",
+    "action": [ {
+      "id": "UKCore-MedicationRequest-ParacetamolOral-Example",
+      "description": "Paracetamol 500mg, four times a day orally.",
+      "resource": {
+        "reference": "MedicationRequest/UKCore-MedicationRequest-ParacetamolOral-Example"
+      }
+    }, {
+      "id": "UKCore-MedicationRequest-ParacetamolIV-Example",
+      "description": "Paracetamol 500mg, four times a day via IV.",
+      "resource": {
+        "reference": "MedicationRequest/UKCore-MedicationRequest-ParacetamolIV-Example"
+      }
+    } ]
+  } ]
+}
