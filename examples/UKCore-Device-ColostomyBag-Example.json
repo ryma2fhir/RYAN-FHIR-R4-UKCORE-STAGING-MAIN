@@ -1,0 +1,29 @@
+{
+  "resourceType": "Device",
+  "id": "UKCore-Device-ColostomyBag-Example",
+  "identifier": [ {
+    "system": "https://www.leedsth.nhs.uk/identifier/devices",
+    "value": "DEV1999990567",
+    "assigner": {
+      "reference": "Organization/UKCore-Organization-LeedsTeachingHospital-Example"
+    }
+  } ],
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "http://snomed.info/sct",
+      "code": "7081011000001108",
+      "display": "Ostopore KAV colostomy bag made to order 744045 45mm Opaque (DBT Medical Ltd) 30 device"
+    } ]
+  },
+  "owner": {
+    "reference": "Organization/UKCore-Organization-LeedsTeachingHospital-Example"
+  },
+  "location": {
+    "reference": "Location/UKCore-Location-CardiologySJUH-Example"
+  },
+  "note": [ {
+    "time": "2021-01-10T16:10:00+00:00",
+    "text": "Pack of 50 currently stored in SJUH Cardiology."
+  } ]
+}

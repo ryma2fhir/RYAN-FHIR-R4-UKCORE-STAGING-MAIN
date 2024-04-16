@@ -1,0 +1,8 @@
+{
+  "resourceType": "Patient",
+  "id": "UKCore-Extension-InterpreterRequired-Example",
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired",
+    "valueBoolean": true
+  } ]
+}

@@ -1,0 +1,32 @@
+{
+  "resourceType": "Observation",
+  "id": "UKCore-Observation-PipeSmoker-Example",
+  "status": "final",
+  "category": [ {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code": "social-history",
+      "display": "Social History"
+    } ]
+  } ],
+  "code": {
+    "coding": [ {
+      "system": "http://snomed.info/sct",
+      "code": "230058003",
+      "display": "Pipe tobacco consumption"
+    } ]
+  },
+  "subject": {
+    "reference": "Patient/UKCore-Patient-RichardSmith-Example"
+  },
+  "effectiveDateTime": "2023-08-10",
+  "performer": [ {
+    "reference": "Organization/UKCore-Organization-LeedsTeachingHospital-Example"
+  } ],
+  "valueQuantity": {
+    "value": 5,
+    "unit": "per day",
+    "system": "http://unitsofmeasure.org",
+    "code": "/d"
+  }
+}

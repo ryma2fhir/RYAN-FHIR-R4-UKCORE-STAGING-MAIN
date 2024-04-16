@@ -1,0 +1,65 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-CareTeam",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CareTeam",
+  "version": "2.1.0",
+  "name": "UKCoreCareTeam",
+  "title": "UK Core CareTeam",
+  "status": "draft",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [CareTeam](https://hl7.org/fhir/R4/CareTeam.html).",
+  "purpose": "This profile allows recording of the care team which includes all the people and organisations who plan to participate in the coordination and delivery of care for an individual. This is not limited to practitioners, but may include other caregivers such as family members, guardians, the individual themselves, or others. The care team, depending on where used, may include care team members specific to a particular care plan, an episode, an encounter, or may reflect all known team members across these perspectives. An individual's care team can be dynamic over time, such that there can be transience of team members, such as a rehabilitation team.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "mapping": [ {
+    "identity": "w5",
+    "uri": "http://hl7.org/fhir/fivews",
+    "name": "FiveWs Pattern Mapping"
+  }, {
+    "identity": "v2",
+    "uri": "http://hl7.org/v2",
+    "name": "HL7 v2 Mapping"
+  }, {
+    "identity": "rim",
+    "uri": "http://hl7.org/v3",
+    "name": "RIM Mapping"
+  } ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "CareTeam",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CareTeam",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "CareTeam.status",
+      "path": "CareTeam.status",
+      "mustSupport": true
+    }, {
+      "id": "CareTeam.subject",
+      "path": "CareTeam.subject",
+      "mustSupport": true
+    }, {
+      "id": "CareTeam.participant",
+      "path": "CareTeam.participant",
+      "mustSupport": true
+    }, {
+      "id": "CareTeam.participant.role",
+      "path": "CareTeam.participant.role",
+      "mustSupport": true
+    }, {
+      "id": "CareTeam.participant.member",
+      "path": "CareTeam.participant.member",
+      "mustSupport": true
+    } ]
+  }
+}

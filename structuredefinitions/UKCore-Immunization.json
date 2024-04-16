@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-Immunization",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Immunization",
+  "version": "2.4.0",
+  "name": "UKCoreImmunization",
+  "title": "UK Core Immunization",
+  "status": "active",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [Immunization](https://hl7.org/fhir/R4/Immunization.html).",
+  "purpose": "This profile is intended to cover the recording of current and historical administration of vaccines to individuals across all healthcare disciplines in all care settings and all regions. \r\n\r\nThis profile does not support the administration of non-vaccine agents, even those that may have or claim to have immunological effects. While the terms \"immunisation\" and \"vaccination\" are not clinically identical, for the purposes of the FHIR profile, the terms are used synonymously.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Immunization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Immunization",
+      "path": "Immunization",
+      "constraint": [ {
+        "key": "ukcore-imm-001",
+        "severity": "error",
+        "human": "If the immunization was not given then Immunization.status value SHALL = 'not-done', and the Immunization.statusReason SHALL be populated",
+        "expression": "(status != 'not-done') or (status = 'not-done' and statusReason.exists())"
+      } ]
+    }, {
+      "id": "Immunization.extension:parentPresent",
+      "path": "Immunization.extension",
+      "sliceName": "parentPresent",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-ParentPresent" ]
+      } ]
+    }, {
+      "id": "Immunization.extension:vaccinationProcedure",
+      "path": "Immunization.extension",
+      "sliceName": "vaccinationProcedure",
+      "type": [ {
+        "code": "Extension",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure" ]
+      } ]
+    }, {
+      "id": "Immunization.status",
+      "path": "Immunization.status",
+      "mustSupport": true
+    }, {
+      "id": "Immunization.statusReason",
+      "path": "Immunization.statusReason",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-ReasonImmunizationNotAdministered"
+      }
+    }, {
+      "id": "Immunization.vaccineCode",
+      "path": "Immunization.vaccineCode",
+      "mustSupport": true,
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-VaccineCode"
+      }
+    }, {
+      "id": "Immunization.patient",
+      "path": "Immunization.patient",
+      "mustSupport": true
+    }, {
+      "id": "Immunization.occurrence[x]",
+      "path": "Immunization.occurrence[x]",
+      "mustSupport": true
+    }, {
+      "id": "Immunization.manufacturer",
+      "path": "Immunization.manufacturer",
+      "mustSupport": true
+    }, {
+      "id": "Immunization.lotNumber",
+      "path": "Immunization.lotNumber",
+      "mustSupport": true
+    }, {
+      "id": "Immunization.site",
+      "path": "Immunization.site",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-ImmunizationAdministrationBodySite"
+      }
+    }, {
+      "id": "Immunization.route",
+      "path": "Immunization.route",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-SubstanceOrProductAdministrationRoute"
+      }
+    }, {
+      "id": "Immunization.doseQuantity",
+      "path": "Immunization.doseQuantity",
+      "mustSupport": true
+    }, {
+      "id": "Immunization.reasonCode",
+      "path": "Immunization.reasonCode",
+      "binding": {
+        "strength": "preferred",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-ImmunizationExplanationReason"
+      }
+    } ]
+  }
+}

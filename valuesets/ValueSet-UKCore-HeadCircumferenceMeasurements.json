@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "UKCore-HeadCircumferenceMeasurements",
+  "url": "https://fhir.hl7.org.uk/ValueSet/UKCore-HeadCircumferenceMeasurements",
+  "version": "1.0.0",
+  "name": "UKCoreHeadCircumferenceMeasurements",
+  "title": "UK Core Head Circumference Measurements",
+  "status": "active",
+  "date": "2023-09-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "A code from the SNOMED CT UK coding system for the measurement of head circumferences. Selected from the SNOMED CT UK coding system:\r - DescendantOrSelfOf 363811000 | Head circumference measure (observable entity)\r - MINUS &nbsp;\r - 1153594009 | Head circumference for age z-score (observable entity)&nbsp;\r - 70751000052109 | Head circumference of biological father (observable entity)&nbsp;\r - 70761000052107 | Head circumference of biological mother (observable entity) &nbsp;\r - DescendantOrSelfOf 170061009 | Child head circumference centile (observable entity)",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "filter": [ {
+        "property": "constraint",
+        "op": "=",
+        "value": "descendantOrSelfOf 363811000 MINUS (1153594009 OR 70751000052109 OR 70761000052107 OR descendantOrSelfOf 170061009)"
+      } ]
+    } ]
+  },
+  "expansion": {
+    "identifier": "e0c507bd-7ebe-452f-8a9a-6a5aeaaa0636",
+    "timestamp": "2023-10-31T15:57:00+00:00",
+    "total": 5,
+    "offset": 0,
+    "contains": [ {
+      "system": "http://snomed.info/sct",
+      "code": "169876006",
+      "display": "Birth head circumference"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "363812007",
+      "display": "Head circumference"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "363811000",
+      "display": "Head circumference measure"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1269262007",
+      "display": "Head circumference of fetus"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "248396005",
+      "display": "Head circumference with caput"
+    } ]
+  }
+}

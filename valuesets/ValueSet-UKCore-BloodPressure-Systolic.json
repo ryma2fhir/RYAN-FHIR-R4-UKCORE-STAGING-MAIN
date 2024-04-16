@@ -1,0 +1,67 @@
+{
+  "resourceType": "ValueSet",
+  "id": "UKCore-BloodPressure-Systolic",
+  "url": "https://fhir.hl7.org.uk/ValueSet/UKCore-BloodPressure-Systolic",
+  "version": "1.0.0",
+  "name": "UKCoreBloodPressureSystolic",
+  "title": "UK Core Blood Pressure Systolic",
+  "status": "active",
+  "date": "2023-09-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "A code from the SNOMED CT UK coding system for the recording of a single systolic blood pressure reading. Selected from the SNOMED CT UK coding system:\r - 163030003 | On examination - Systolic blood pressure reading (finding)\r - 271649006 | Systolic blood pressure (observable entity)\r - 407556006 | Lying systolic blood pressure (observable entity)\r - 1162737008 | Self reported systolic blood pressure (observable entity)\r - 407554009 | Sitting systolic blood pressure (observable entity)\r - 400974009 | Standing systolic blood pressure (observable entity)\r - 72313002 | Systolic arterial pressure (observable entity)",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "filter": [ {
+        "property": "constraint",
+        "op": "=",
+        "value": "163030003 OR 271649006 OR 407556006 OR 1162737008 OR 407554009 OR 400974009 OR 72313002"
+      } ]
+    } ]
+  },
+  "expansion": {
+    "identifier": "3fdae7f8-8c2f-4f30-bd51-4e21b000a5f7",
+    "timestamp": "2023-10-31T22:01:00+00:00",
+    "total": 7,
+    "offset": 0,
+    "contains": [ {
+      "system": "http://snomed.info/sct",
+      "code": "407556006",
+      "display": "Lying systolic blood pressure"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "163030003",
+      "display": "O/E - Systolic BP reading"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "1162737008",
+      "display": "Self reported systolic blood pressure"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "407554009",
+      "display": "Sitting systolic blood pressure"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "400974009",
+      "display": "Standing systolic blood pressure"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "72313002",
+      "display": "Systolic arterial pressure"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "271649006",
+      "display": "Systolic blood pressure"
+    } ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Extension-UKCore-PriorityReason",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-PriorityReason",
+  "version": "1.0.0",
+  "name": "ExtensionUKCorePriorityReason",
+  "title": "Extension UK Core Priority Reason",
+  "status": "active",
+  "date": "2023-04-28",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This extends the Service Request Resource to support the underlying reason why a Service Request is urgent.",
+  "purpose": "This is a Genomics use case to record the reason why an urgent test has been requested. This differs from supportingInfo in that it does not necessarily indicate why the test is being requested.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "mapping": [ {
+    "identity": "rim",
+    "uri": "http://hl7.org/v3",
+    "name": "RIM Mapping"
+  } ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [ {
+    "type": "element",
+    "expression": "ServiceRequest.priority"
+  } ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Extension",
+      "path": "Extension",
+      "short": "A SNOMED CT concept representing the reason a Service Request is urgent.",
+      "definition": "A SNOMED CT concept representing the reason a Service Request is urgent"
+    }, {
+      "id": "Extension.url",
+      "path": "Extension.url",
+      "fixedUri": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-PriorityReason"
+    }, {
+      "id": "Extension.value[x]",
+      "path": "Extension.value[x]",
+      "short": "This describes the reason a service request is urgent",
+      "min": 1,
+      "type": [ {
+        "code": "CodeableConcept"
+      } ],
+      "binding": {
+        "strength": "preferred",
+        "description": "A set of codes that define the reason why a service request is urgent.",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-ServiceRequestReasonCode"
+      }
+    } ]
+  }
+}

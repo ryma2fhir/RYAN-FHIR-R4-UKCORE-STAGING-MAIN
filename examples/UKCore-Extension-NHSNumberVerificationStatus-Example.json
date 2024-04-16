@@ -1,0 +1,16 @@
+{
+  "resourceType": "Patient",
+  "id": "UKCore-Extension-NHSNumberVerificationStatus-Example",
+  "identifier": [ {
+    "extension": [ {
+      "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus",
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-NHSNumberVerificationStatusEngland",
+          "code": "01",
+          "display": "Number present and verified"
+        } ]
+      }
+    } ]
+  } ]
+}

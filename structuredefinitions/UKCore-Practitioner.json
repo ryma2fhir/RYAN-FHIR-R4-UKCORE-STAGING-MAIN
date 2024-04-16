@@ -1,0 +1,76 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UKCore-Practitioner",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner",
+  "version": "2.4.0",
+  "name": "UKCorePractitioner",
+  "title": "UK Core Practitioner",
+  "status": "active",
+  "date": "2023-12-12",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This profile defines the UK constraints and extensions on the International FHIR resource [Practitioner](https://hl7.org/fhir/R4/Practitioner.html).",
+  "purpose": "This profile allows exchange of information about all individuals who are engaged in the healthcare process and healthcare-related services as part of their formal responsibilities, is used for attribution of activities and responsibilities to these individuals.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Practitioner",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Practitioner.identifier",
+      "path": "Practitioner.identifier",
+      "mustSupport": true
+    }, {
+      "id": "Practitioner.identifier.system",
+      "path": "Practitioner.identifier.system",
+      "mustSupport": true
+    }, {
+      "id": "Practitioner.identifier.value",
+      "path": "Practitioner.identifier.value",
+      "mustSupport": true
+    }, {
+      "id": "Practitioner.name",
+      "path": "Practitioner.name",
+      "mustSupport": true
+    }, {
+      "id": "Practitioner.name.family",
+      "path": "Practitioner.name.family",
+      "mustSupport": true
+    }, {
+      "id": "Practitioner.name.given",
+      "path": "Practitioner.name.given",
+      "mustSupport": false
+    }, {
+      "id": "Practitioner.telecom",
+      "path": "Practitioner.telecom",
+      "mustSupport": true
+    }, {
+      "id": "Practitioner.telecom.system",
+      "path": "Practitioner.telecom.system",
+      "mustSupport": true
+    }, {
+      "id": "Practitioner.telecom.value",
+      "path": "Practitioner.telecom.value",
+      "mustSupport": true
+    }, {
+      "id": "Practitioner.communication",
+      "path": "Practitioner.communication",
+      "binding": {
+        "strength": "required",
+        "description": "A ValueSet that identifies the language used by a person.",
+        "valueSet": "http://hl7.org/fhir/ValueSet/all-languages"
+      }
+    } ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "UKCore-Extension-DeviceReference-Example",
+  "status": "final",
+  "code": {
+    "coding": [ {
+      "system": "http://snomed.info/sct",
+      "code": "721981007",
+      "display": "Diagnostic studies report"
+    } ]
+  },
+  "subject": {
+    "reference": "Patient/UKCore-Patient-RichardSmith-Example"
+  },
+  "performer": [ {
+    "extension": [ {
+      "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-DeviceReference",
+      "valueReference": {
+        "reference": "Device/UKCore-Device-SoftwareAsAMedicalDevice-Example"
+      }
+    } ],
+    "display": "Software as a medical device"
+  } ],
+  "resultsInterpreter": [ {
+    "extension": [ {
+      "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-DeviceReference",
+      "valueReference": {
+        "reference": "Device/UKCore-Device-SoftwareAsAMedicalDevice-Example"
+      }
+    } ],
+    "display": "Software as a medical device"
+  } ],
+  "specimen": [ {
+    "reference": "Specimen/UKCore-Specimen-BloodSpecimen-Example"
+  } ],
+  "result": [ {
+    "reference": "Observation/UKCore-Observation-WhiteCellCount-Example"
+  } ]
+}

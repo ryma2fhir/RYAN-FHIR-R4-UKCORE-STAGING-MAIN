@@ -1,0 +1,104 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Extension-UKCore-TypedPeriod",
+  "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-TypedPeriod",
+  "version": "1.0.0",
+  "name": "ExtensionUKCoreTypedPeriod",
+  "title": "Extension UK Core Typed Period",
+  "status": "draft",
+  "date": "2023-10-13",
+  "publisher": "HL7 UK",
+  "contact": [ {
+    "name": "HL7 UK",
+    "telecom": [ {
+      "system": "email",
+      "value": "ukcore@hl7.org.uk",
+      "use": "work",
+      "rank": 1
+    } ]
+  } ],
+  "description": "This supports the exchange of time periods. The extension time period is carried along with a code to identify whether the data is record for legal or operational periods.",
+  "purpose": "This extension has been created from an ODS use-case in which there is a requirement to hold data for Legal and Operational dates, although it is expected to be broader than ODS and can be used for other scenarios.",
+  "copyright": "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+  "fhirVersion": "4.0.1",
+  "mapping": [ {
+    "identity": "rim",
+    "uri": "http://hl7.org/v3",
+    "name": "RIM Mapping"
+  } ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [ {
+    "type": "element",
+    "expression": "Organization"
+  }, {
+    "type": "element",
+    "expression": "OrganizationAffiliation"
+  } ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [ {
+      "id": "Extension",
+      "path": "Extension",
+      "short": "This supports the recording of a period related to the specified date type.",
+      "definition": "This supports the recording of a period related to the specified date type. The period is carried along with a code to identify the type of data."
+    }, {
+      "id": "Extension.extension",
+      "path": "Extension.extension",
+      "min": 2
+    }, {
+      "id": "Extension.extension:dataType",
+      "path": "Extension.extension",
+      "sliceName": "dataType",
+      "short": "Whether the Date Period is 'Legal' or 'Operational'.",
+      "min": 1,
+      "max": "1"
+    }, {
+      "id": "Extension.extension:dataType.url",
+      "path": "Extension.extension.url",
+      "fixedUri": "dataType"
+    }, {
+      "id": "Extension.extension:dataType.value[x]",
+      "path": "Extension.extension.value[x]",
+      "short": "A ValueSet to identify the type of period.",
+      "min": 1,
+      "type": [ {
+        "code": "Coding"
+      } ],
+      "binding": {
+        "strength": "extensible",
+        "description": "The type of period data.",
+        "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-PeriodType"
+      }
+    }, {
+      "id": "Extension.extension:period",
+      "path": "Extension.extension",
+      "sliceName": "period",
+      "short": "The specific business related date or time period.",
+      "min": 1,
+      "max": "1"
+    }, {
+      "id": "Extension.extension:period.url",
+      "path": "Extension.extension.url",
+      "fixedUri": "period"
+    }, {
+      "id": "Extension.extension:period.value[x]",
+      "path": "Extension.extension.value[x]",
+      "short": "The date or time period.",
+      "min": 1,
+      "type": [ {
+        "code": "Period"
+      } ]
+    }, {
+      "id": "Extension.url",
+      "path": "Extension.url",
+      "fixedUri": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-TypedPeriod"
+    }, {
+      "id": "Extension.value[x]",
+      "path": "Extension.value[x]",
+      "max": "0"
+    } ]
+  }
+}

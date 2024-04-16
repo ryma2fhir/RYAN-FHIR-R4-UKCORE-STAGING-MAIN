@@ -1,0 +1,10 @@
+{
+  "resourceType": "Condition",
+  "id": "UKCore-Extension-CodingSCT-CodeUnknown-Example",
+  "code": {
+    "text": "Myocardial infarction"
+  },
+  "subject": {
+    "reference": "Patient/UKCore-Patient-RichardSmith-Example"
+  }
+}
