@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "UKCore-AddressKeyType",
-  "url": "https://fhir.hl7.org.uk/ValueSet/UKCore-AddressKeyType",
+  "url": "https://fhir.hl7.org.ukwrong/ValueSet/UKCore-AddressKeyType",
   "version": "2.1.0",
   "name": "UKCoreAddressKeyType",
   "title": "UK Core Address Key Type",
