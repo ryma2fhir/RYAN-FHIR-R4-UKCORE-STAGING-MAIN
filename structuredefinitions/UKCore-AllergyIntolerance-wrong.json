@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "UKCore-AllergyIntolerance",
-  "url": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance",
+  "url": "https://fhir.hl7.org.uk/StructureDefinitionwrong/UKCore-AllergyIntolerance",
   "version": "2.5.0",
   "name": "UKCoreAllergyIntolerance",
   "title": "UK Core AllergyIntolerance",
