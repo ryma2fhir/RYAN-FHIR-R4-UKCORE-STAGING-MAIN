@@ -1,7 +1,7 @@
 {
   "resourceType": "CodeSystem",
   "id": "UKCore-AdditionalPersonRelationshipRole",
-  "url": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AdditionalPersonRelationshipRole",
+  "url": "https://fhir.hl7.org.uk/CodeSystemwrong/UKCore-AdditionalPersonRelationshipRole",
   "version": "2.1.0",
   "name": "UKCoreAdditionalPersonRelationshipRole",
   "title": "UK Core Additional Person Relationship Role",
