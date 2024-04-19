@@ -5,7 +5,7 @@
   <version value="1.1.0" />
   <name value="ExtensionUKCoreAdditionalContact" />
   <title value="Extension UK Core Additional Contact" />
-  <status value="active" />
+  <status value="retired" />
   <date value="2023-12-12" />
   <publisher value="HL7 UK" />
   <contact>
