@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="UKCore-AllergyIntolerance" />
-  <url value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance" />
+  <url value="https://fhir.hl7.org.ukwrong/StructureDefinition/UKCore-AllergyIntolerance" />
   <version value="2.5.0" />
   <name value="UKCoreAllergyIntolerance" />
   <title value="UK Core AllergyIntolerance" />
