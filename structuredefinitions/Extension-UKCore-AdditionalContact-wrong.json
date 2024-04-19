@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "Extension-UKCore-AdditionalContact",
-  "url": "https://fhir.hl7.org.ukm/StructureDefinition/Extension-UKCore-AdditionalContactm",
+  "url": "https://fhir.hl7.org.ukwrong/StructureDefinition/Extension-UKCore-AdditionalContactwrong",
   "version": "1.1.0",
   "name": "ExtensionUKCoreAdditionalContact",
   "title": "Extension UK Core Additional Contact",
