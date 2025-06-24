@@ -54,7 +54,7 @@ $(document).ready(function () {
     const profileBase = `https://simplifier.net/guide/${guideTitleUrl}/home/profilesandextensions/`;
 
     // Use .page.md suffix for unpublished preview
-    const pageSuffix = isUnpublished ? ".page.md" : "";
+    const pageSuffix = isUnpublished ? "/index.page.md" : "";
 
     const $table = $("table.table-bordered");
     if ($table.length === 0) return;
@@ -69,7 +69,7 @@ $(document).ready(function () {
         if (!resourceName || resourceName.toLowerCase() === "coding") return;
 
         const baseResource = resourceName.split(".")[0];
-        const url = `${profileBase}${baseResource}/index${pageSuffix}${queryString}`;
+        const url = `${profileBase}${baseResource}${pageSuffix}${queryString}`;
         $resourceCell.html(`<a href="${url}">${resourceName}</a>`);
     });
 });
