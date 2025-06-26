@@ -13,3 +13,4 @@ If:
 - two coding values are present then `userSelected` SHALL be present on each,
 - the code is computerised then `userSelected` SHALL = `false`,
 - a single coding and no `userSelected` present then it MAY be inferred as `true`.
+

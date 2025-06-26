@@ -1,11 +1,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="UKCore-Observation-Lab" />
   <url value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation-Lab" />
-  <version value="2.0.1" />
+  <version value="2.1.0" />
   <name value="UKCoreObservationLab" />
   <title value="UK Core Observation Lab" />
   <status value="active" />
-  <date value="2024-07-23" />
+  <date value="2025-06-24" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="HL7 UK" />
@@ -143,18 +143,27 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/valueset-reference" />
       </type>
     </element>
-    <element id="Observation.code.coding:valueset-PaLM">
+        <element id="Observation.code.coding:pathology-PaLM-Procedures">
       <path value="Observation.code.coding" />
-      <sliceName value="valueset-PaLM" />
+      <sliceName value="pathology-PaLM-Procedures" />
+      <binding>
+        <strength value="extensible" />
+        <description value="This slice is to denote the code comes from the Pathology and laboratory medicine Procedure entity simple reference set. This ValueSet is to be used if this Observation Profile is being used as a grouper for Pathology observables" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-PathologyAndLaboratoryMedicineProcedures" />
+      </binding>
+    </element>
+    <element id="Observation.code.coding:pathology-PaLM-Observations">
+      <path value="Observation.code.coding" />
+      <sliceName value="pathology-PaLM" />
       <binding>
         <strength value="extensible" />
         <description value="This slice is to denote the code comes from the Pathology and laboratory medicine observable entity simple reference set" />
         <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-PathologyAndLaboratoryMedicineObservables" />
       </binding>
     </element>
-    <element id="Observation.code.coding:valueset-PBCL">
+    <element id="Observation.code.coding:pathology-PBCL-Obsevations">
       <path value="Observation.code.coding" />
-      <sliceName value="valueset-PBCL" />
+      <sliceName value="pathology-PBCL" />
       <binding>
         <strength value="extensible" />
         <description value="This slice is to denote the code comes from the Pathology Bounded Code List observables simple reference set" />
