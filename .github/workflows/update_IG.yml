@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: develop  # Always base off develop
+          ref: main  # Always base off develop
 
       #- name: Set up Git
       #  run: |
@@ -67,3 +67,4 @@ jobs:
           title: "Automated Update from Simplifier"
           body: "This PR includes the latest daily changes from Simplifier."
           commit-message: "Automated update from Simplifier"
+          sign-commits: true
