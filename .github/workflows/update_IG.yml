@@ -1,0 +1,60 @@
+name: Update IG Pages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *' # Daily at 6 AM UTC
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  simplifier_username: ${{ secrets.SIMPLIFIER_USERNAME }}
+  simplifier_password: ${{ secrets.SIMPLIFIER_PASSWORD }}
+  pr_branch: automated/ig-update
+
+jobs:
+  update_IG:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout default branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Create or reset PR branch
+        run: |
+          git fetch origin
+          git checkout main
+          git pull origin main
+          git branch -f ${{ env.pr_branch }}  # Force-create/update branch pointer
+          git checkout ${{ env.pr_branch }}
+
+      - name: Run update script
+        run: python -u .github/python_scripts/update_IG.py
+
+      - name: Commit any changes
+        run: |
+          git add .
+          git diff --cached --quiet || git commit -m "Automated update from Simplifier"
+
+      - name: Force push to PR branch
+        run: git push origin ${{ env.pr_branch }} --force
+
+      - name: Create or update PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.pr_branch }}
+          title: "Automated Update from Simplifier"
+          body: "This PR includes the latest daily changes."
+          commit-message: "Automated update from Simplifier"
+          delete-branch: false  # Keep branch
