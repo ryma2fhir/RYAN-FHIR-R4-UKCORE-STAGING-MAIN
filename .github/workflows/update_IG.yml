@@ -36,6 +36,9 @@ jobs:
           git pull origin develop
           git checkout -B ${{ env.pr_branch }}
 
+      - name: Install dependencies
+        run: pip install python-dotenv
+
       - name: Run update script
         run: python -u .github/python_scripts/update_IG.py
 
