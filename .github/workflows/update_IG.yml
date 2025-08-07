@@ -19,11 +19,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout default branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: develop  # Always base off develop
 
       - name: Set up Git
         run: |
@@ -33,14 +32,10 @@ jobs:
       - name: Create or reset PR branch
         run: |
           git fetch origin
-          git checkout main
-          git pull origin main
-          git branch -f ${{ env.pr_branch }}  # Force-create/update branch pointer
-          git checkout ${{ env.pr_branch }}
-      
-      - name: Install dependencies
-        run: pip install python-dotenv
-      
+          git checkout develop
+          git pull origin develop
+          git checkout -B ${{ env.pr_branch }}
+
       - name: Run update script
         run: python -u .github/python_scripts/update_IG.py
 
@@ -57,7 +52,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.pr_branch }}
+          base: develop
           title: "Automated Update from Simplifier"
-          body: "This PR includes the latest daily changes."
+          body: "This PR includes the latest daily changes from Simplifier."
           commit-message: "Automated update from Simplifier"
-          delete-branch: false  # Keep branch
+          delete-branch: false
