@@ -23,17 +23,17 @@ jobs:
         with:
           ref: develop  # Always base off develop
 
-      - name: Set up Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      #- name: Set up Git
+      #  run: |
+      #    git config --global user.name "github-actions[bot]"
+      #    git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Create or reset PR branch
-        run: |
-          git fetch origin
-          git checkout develop
-          git pull origin develop
-          git checkout -B ${{ env.pr_branch }}
+      #- name: Create or reset PR branch
+      #  run: |
+      #    git fetch origin
+      #    git checkout develop
+      #    git pull origin develop
+      #    git checkout -B ${{ env.pr_branch }}
 
       - name: Install dependencies
         run: pip install python-dotenv
@@ -41,14 +41,14 @@ jobs:
       - name: Run update script
         run: python -u .github/python_scripts/update_IG.py
 
-      - name: Show changes before commit
-        run: |
-          echo "===== Git Status ====="
-          git status
-          echo "===== Diff ====="
-          git diff
-          echo "===== Staged Diff ====="
-          git diff --cached
+      #- name: Show changes before commit
+      #  run: |
+      #    echo "===== Git Status ====="
+      #    git status
+      #    echo "===== Diff ====="
+      #    git diff
+      #    echo "===== Staged Diff ====="
+      #    git diff --cached
 
       #- name: Commit any changes
       #  run: |
@@ -67,4 +67,3 @@ jobs:
           title: "Automated Update from Simplifier"
           body: "This PR includes the latest daily changes from Simplifier."
           commit-message: "Automated update from Simplifier"
-          delete-branch: false
