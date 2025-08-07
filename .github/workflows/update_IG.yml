@@ -50,13 +50,13 @@ jobs:
           echo "===== Staged Diff ====="
           git diff --cached
 
-      - name: Commit any changes
-        run: |
-          git add .
-          git commit --allow-empty -m "Force commit to test workflow"
+      #- name: Commit any changes
+      #  run: |
+      #    git add .
+      #    git commit --allow-empty -m "Force commit to test workflow"
 
-      - name: Force push to PR branch
-        run: git push origin ${{ env.pr_branch }} --force
+     # - name: Force push to PR branch
+     #   run: git push origin ${{ env.pr_branch }} --force
 
       - name: Create or update PR
         uses: peter-evans/create-pull-request@v7
