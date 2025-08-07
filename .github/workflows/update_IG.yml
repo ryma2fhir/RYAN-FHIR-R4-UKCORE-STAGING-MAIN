@@ -45,7 +45,7 @@ jobs:
       - name: Commit any changes
         run: |
           git add .
-          git diff --cached --quiet || git commit -m "Automated update from Simplifier"
+          git commit --allow-empty -m "Force commit to test workflow"
 
       - name: Force push to PR branch
         run: git push origin ${{ env.pr_branch }} --force
