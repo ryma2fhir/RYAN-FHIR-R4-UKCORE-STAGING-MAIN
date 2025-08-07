@@ -21,42 +21,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main  # Always base off develop
-
-      #- name: Set up Git
-      #  run: |
-      #    git config --global user.name "github-actions[bot]"
-      #    git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      #- name: Create or reset PR branch
-      #  run: |
-      #    git fetch origin
-      #    git checkout develop
-      #    git pull origin develop
-      #    git checkout -B ${{ env.pr_branch }}
+          ref: develop  
 
       - name: Install dependencies
         run: pip install python-dotenv
 
       - name: Run update script
         run: python -u .github/python_scripts/update_IG.py
-
-      #- name: Show changes before commit
-      #  run: |
-      #    echo "===== Git Status ====="
-      #    git status
-      #    echo "===== Diff ====="
-      #    git diff
-      #    echo "===== Staged Diff ====="
-      #    git diff --cached
-
-      #- name: Commit any changes
-      #  run: |
-      #    git add .
-      #    git commit --allow-empty -m "Force commit to test workflow"
-
-     # - name: Force push to PR branch
-     #   run: git push origin ${{ env.pr_branch }} --force
 
       - name: Create or update PR
         uses: peter-evans/create-pull-request@v7
