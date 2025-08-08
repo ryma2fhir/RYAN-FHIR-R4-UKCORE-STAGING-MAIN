@@ -7,7 +7,7 @@ The UK Core follows the HL7 publication-status value set.
 
 - **Active**: The asset has been fully developed and successfully reviewed through the ballot process. While future changes may occur, they will be minimised where possible.
 
-- **Retired**: The asset is no longer aligned with its original use case. This is typically due to updates in FHIR versions, alignment with broader standards, or because it poses a clinical or technical risk.
+- **Retired**: The asset is no longer aligned with its original use case and should not be used. This is typically due to updates in FHIR versions, alignment with broader standards, or because it poses a clinical or technical risk.
 
 *Additional notes*:
 
